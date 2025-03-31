@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "mdsam"
+version = "0.0.1"
+authors = [
+  { name="Felix Thouin", email="felix.thouin@umontreal.ca" },
+]
+description = "Multidimensional spectroscopy analysis module"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/SilvaScience/mdsam"
+Issues = "https://github.com/SilvaScience/mdsam/issues"
