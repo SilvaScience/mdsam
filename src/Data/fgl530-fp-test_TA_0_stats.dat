@@ -1,0 +1,1275 @@
+Pump-probe stats, Not referenced, 500 shots per spectrum,
+Measurement started: 2025.02.12 20:47:01.630
+Laser trigger clock divider: 28
+Chopper is locked: True
+Grating blaze wavelength, nm: 800
+Grating grooves, gr/mm 150.100006103516
+Number of spectra in averaged background signal: 0
+Number of runs: 3
+Pump laser frequency: 49999 Hz
+Pump motorized VNDF transmittance: 40.9935023354579
+Probe motorized VNDF transmittance: 43.5431700065636
+Detector motorized VNDF transmittance: 14.0837844093638
+Harpia-TB motorized VNDF transmittance: 99.9987443401134
+Chopper clock source: internal, target frequency 75 Hz
+Chopper actual frequency: 74.6999588012695 Hz
+Chopper actual phase error: -0.0327554196119308 rad
+Sample mover active: False
+Background: PumpPower, SmplBckPumped, RefBckPumped, SmplBckUnpumped, RefBckUnpumped,
+Measurement: PumpPower, SmplMeasPumped, RefMeasPumped, SmplMeasUnpumped, RefMeasUnpumped
+Wavelength: 4.92498322E+002	4.94135101E+002	4.95771851E+002	4.97408569E+002	4.99045227E+002	5.00681885E+002	5.02318451E+002	5.03955017E+002	5.05591614E+002	5.07228088E+002	5.08864563E+002	5.10500977E+002	5.12137390E+002	5.13773743E+002	5.15410095E+002	5.17046387E+002	5.18682556E+002	5.20318848E+002	5.21955078E+002	5.23591187E+002	5.25227234E+002	5.26863281E+002	5.28499390E+002	5.30135376E+002	5.31771301E+002	5.33407227E+002	5.35043091E+002	5.36678955E+002	5.38314697E+002	5.39950439E+002	5.41586121E+002	5.43221802E+002	5.44857483E+002	5.46493103E+002	5.48128540E+002	5.49764099E+002	5.51399475E+002	5.53034912E+002	5.54670227E+002	5.56305603E+002	5.57940918E+002	5.59576050E+002	5.61211304E+002	5.62846375E+002	5.64481567E+002	5.66116516E+002	5.67751587E+002	5.69386536E+002	5.71021423E+002	5.72656250E+002	5.74291077E+002	5.75925842E+002	5.77560547E+002	5.79195190E+002	5.80829834E+002	5.82464355E+002	5.84098938E+002	5.85733398E+002	5.87367798E+002	5.89002136E+002	5.90636414E+002	5.92270691E+002	5.93904968E+002	5.95539063E+002	5.97173218E+002	5.98807190E+002	6.00441223E+002	6.02075195E+002	6.03709045E+002	6.05342834E+002	6.06976624E+002	6.08610352E+002	6.10244019E+002	6.11877625E+002	6.13511169E+002	6.15144653E+002	6.16778076E+002	6.18411499E+002	6.20044861E+002	6.21678040E+002	6.23311279E+002	6.24944458E+002	6.26577515E+002	6.28210510E+002	6.29843445E+002	6.31476440E+002	6.33109253E+002	6.34742065E+002	6.36374756E+002	6.38007446E+002	6.39640015E+002	6.41272644E+002	6.42905029E+002	6.44537537E+002	6.46169800E+002	6.47802185E+002	6.49434387E+002	6.51066528E+002	6.52698669E+002	6.54330627E+002	6.55962646E+002	6.57594604E+002	6.59226379E+002	6.60858215E+002	6.62489807E+002	6.64121521E+002	6.65753113E+002	6.67384583E+002	6.69015991E+002	6.70647400E+002	6.72278687E+002	6.73909851E+002	6.75541077E+002	6.77172119E+002	6.78803162E+002	6.80434143E+002	6.82065002E+002	6.83695862E+002	6.85326538E+002	6.86957214E+002	6.88587891E+002	6.90218384E+002	6.91848816E+002	6.93479187E+002	6.95109497E+002	6.96739746E+002	6.98369934E+002	7.00000000E+002	7.01630005E+002	7.03259949E+002	7.04889832E+002	7.06519592E+002	7.08149292E+002	7.09778870E+002	7.11408447E+002	7.13037964E+002	7.14667358E+002	7.16296692E+002	7.17925903E+002	7.19555115E+002	7.21184204E+002	7.22813171E+002	7.24442078E+002	7.26070984E+002	7.27699768E+002	7.29328369E+002	7.30957031E+002	7.32585510E+002	7.34213989E+002	7.35842407E+002	7.37470642E+002	7.39098877E+002	7.40726929E+002	7.42354980E+002	7.43982971E+002	7.45610779E+002	7.47238586E+002	7.48866211E+002	7.50493896E+002	7.52121460E+002	7.53748840E+002	7.55376160E+002	7.57003479E+002	7.58630676E+002	7.60257813E+002	7.61884766E+002	7.63511658E+002	7.65138550E+002	7.66765320E+002	7.68392029E+002	7.70018555E+002	7.71644958E+002	7.73271423E+002	7.74897705E+002	7.76523926E+002	7.78150085E+002	7.79776001E+002	7.81402039E+002	7.83027832E+002	7.84653687E+002	7.86279297E+002	7.87904846E+002	7.89530334E+002	7.91155762E+002	7.92781067E+002	7.94406250E+002	7.96031250E+002	7.97656372E+002	7.99281250E+002	8.00906067E+002	8.02530762E+002	8.04155334E+002	8.05779968E+002	8.07404419E+002	8.09028687E+002	8.10652893E+002	8.12277039E+002	8.13901184E+002	8.15525085E+002	8.17148926E+002	8.18772644E+002	8.20396301E+002	8.22019836E+002	8.23643311E+002	8.25266663E+002	8.26889893E+002	8.28513062E+002	8.30136108E+002	8.31759094E+002	8.33381897E+002	8.35004578E+002	8.36627258E+002	8.38249878E+002	8.39872253E+002	8.41494568E+002	8.43116760E+002	8.44738892E+002	8.46360962E+002	8.47982788E+002	8.49604614E+002	8.51226318E+002	8.52847900E+002	8.54469482E+002	8.56090820E+002	8.57712097E+002	8.59333252E+002	8.60954285E+002	8.62575256E+002	8.64196045E+002	8.65816772E+002	8.67437439E+002	8.69057983E+002	8.70678406E+002	8.72298584E+002	8.73918762E+002	8.75538818E+002	8.77158813E+002	8.78778687E+002	8.80398376E+002	8.82018005E+002	8.83637512E+002	8.85256958E+002	8.86876282E+002	8.88495361E+002	8.90114380E+002	8.91733398E+002	8.93352234E+002	8.94971008E+002	8.96589600E+002	8.98208008E+002	8.99826355E+002	9.01444702E+002	9.03062805E+002	9.04680786E+002	9.06298645E+002	9.07916443E+002
+Background, scan 1, Delay -1.00007505E+001 3.99998749E+001
+Pump=2.38166764E-001
+PumpedSignalCount=1200, TotalSignalCount=2495, PumpedSignalDeviation=0.00173386542861054
+PumpedSignalCount=1200, TotalSignalCount=2495, PumpedSignalDeviation=0.00173386542861054
+NotPumpedSignalCount=1035, TotalSignalCount=2495, NotPumpedSignalDeviation=0.001740467915376
+NotPumpedSignalCount=1035, TotalSignalCount=2495, NotPumpedSignalDeviation=0.001740467915376
+Measurement, scan 1, Delay Delay -1.00007505E+001 3.99998749E+001
+Pump=2.39183623E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.019155454170617
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.019155454170617
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.0191896758822233
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.0191896758822233
+Measurement, scan 1, Delay Delay -9.00005004E+000 3.99998749E+001
+Pump=2.40099154E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.0150797106048594
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.0150797106048594
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0152471726789886
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0152471726789886
+Measurement, scan 1, Delay Delay -7.99934954E+000 3.99998749E+001
+Pump=2.38326207E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.0074247750281824
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.0074247750281824
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0070373556592518
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0070373556592518
+Measurement, scan 1, Delay Delay -7.00073385E+000 3.99998749E+001
+Pump=2.36746976E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00548440038293699
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00548440038293699
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00555287060671499
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00555287060671499
+Measurement, scan 1, Delay Delay -6.00003336E+000 3.99998749E+001
+Pump=2.37874998E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00565318469474626
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00565318469474626
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0056527980519667
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0056527980519667
+Measurement, scan 1, Delay Delay -4.99933287E+000 3.99998749E+001
+Pump=2.36604520E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.0132165851850638
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.0132165851850638
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0136112843914731
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0136112843914731
+Measurement, scan 1, Delay Delay -4.00071717E+000 3.99998749E+001
+Pump=2.36786911E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00307418103774981
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00307418103774981
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00303226239204057
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00303226239204057
+Measurement, scan 1, Delay Delay -3.00001668E+000 3.99998749E+001
+Pump=2.36539551E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00256262335380319
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00256262335380319
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00252146913562218
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00252146913562218
+Measurement, scan 1, Delay Delay -1.99931619E+000 3.99998749E+001
+Pump=2.35550408E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00369866598450901
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00369866598450901
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00370217561392096
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00370217561392096
+Measurement, scan 1, Delay Delay -1.00070049E+000 3.99998749E+001
+Pump=2.35801941E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00392145499752969
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00392145499752969
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00398410276581805
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00398410276581805
+Measurement, scan 1, Delay Delay -9.50665466E-001 3.99998749E+001
+Pump=2.36073739E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00259159709207378
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00259159709207378
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00260317303215431
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00260317303215431
+Measurement, scan 1, Delay Delay -9.00630441E-001 3.99998749E+001
+Pump=2.37123977E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.0125440140492257
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.0125440140492257
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0125097648769262
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0125097648769262
+Measurement, scan 1, Delay Delay -8.50595417E-001 3.99998749E+001
+Pump=2.37335276E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0133040694684205
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0133040694684205
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0132907797461922
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0132907797461922
+Measurement, scan 1, Delay Delay -8.00560392E-001 3.99998749E+001
+Pump=2.35739952E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00416424061459618
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00416424061459618
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00416025250042223
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00416025250042223
+Measurement, scan 1, Delay Delay -7.50525368E-001 3.99998749E+001
+Pump=2.35976881E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00431179070123249
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00431179070123249
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00427654689398283
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00427654689398283
+Measurement, scan 1, Delay Delay -7.00490343E-001 3.99998749E+001
+Pump=2.35610609E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00292634513174053
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00292634513174053
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0028871877135951
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0028871877135951
+Measurement, scan 1, Delay Delay -6.50455319E-001 3.99998749E+001
+Pump=2.35112014E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00379832987475058
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00379832987475058
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00372728577904692
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00372728577904692
+Measurement, scan 1, Delay Delay -6.00420294E-001 3.99998749E+001
+Pump=2.35894030E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00739975337363175
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00739975337363175
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00723593284697031
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00723593284697031
+Measurement, scan 1, Delay Delay -5.50385270E-001 3.99998749E+001
+Pump=2.36004895E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00456220854876776
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00456220854876776
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00459464841701333
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00459464841701333
+Measurement, scan 1, Delay Delay -5.00350245E-001 3.99998749E+001
+Pump=2.36454614E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00448170799883927
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00448170799883927
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00429272627889015
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00429272627889015
+Measurement, scan 1, Delay Delay -4.50315221E-001 3.99998749E+001
+Pump=2.36500510E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00323349848310741
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00323349848310741
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00319212428284512
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00319212428284512
+Measurement, scan 1, Delay Delay -4.00280196E-001 3.99998749E+001
+Pump=2.35949165E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00322357323387155
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00322357323387155
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0032562103162012
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0032562103162012
+Measurement, scan 1, Delay Delay -3.50245172E-001 3.99998749E+001
+Pump=2.36117250E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00505095406750355
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00505095406750355
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00498452529011473
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00498452529011473
+Measurement, scan 1, Delay Delay -3.00210147E-001 3.99998749E+001
+Pump=2.37666977E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00329689750916086
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00329689750916086
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00333207947056982
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00333207947056982
+Measurement, scan 1, Delay Delay -2.50175123E-001 3.99998749E+001
+Pump=2.35870188E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0025908401940122
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0025908401940122
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00258772395381383
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00258772395381383
+Measurement, scan 1, Delay Delay -2.00140098E-001 3.99998749E+001
+Pump=2.36622402E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00254638032451331
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00254638032451331
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00253255188732118
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00253255188732118
+Measurement, scan 1, Delay Delay -1.50105074E-001 3.99998749E+001
+Pump=2.37325739E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00262074875076608
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00262074875076608
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00259715727419911
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00259715727419911
+Measurement, scan 1, Delay Delay -1.00070049E-001 3.99998749E+001
+Pump=2.36415573E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00464254139815621
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00464254139815621
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00484120066915965
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00484120066915965
+Measurement, scan 1, Delay Delay -5.00350245E-002 3.99998749E+001
+Pump=2.36467429E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00484427203309522
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00484427203309522
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00472964075058263
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00472964075058263
+Measurement, scan 1, Delay Delay 0.00000000E+000 3.99998749E+001
+Pump=2.36466833E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00669532952681228
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00669532952681228
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00683586532475212
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00683586532475212
+Measurement, scan 1, Delay Delay 5.00350245E-002 3.99998749E+001
+Pump=2.36911485E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00320047684486298
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00320047684486298
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00315665311947879
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00315665311947879
+Measurement, scan 1, Delay Delay 1.00070049E-001 3.99998749E+001
+Pump=2.37813903E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00341196672118887
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00341196672118887
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00380332390219096
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00380332390219096
+Measurement, scan 1, Delay Delay 1.50105074E-001 3.99998749E+001
+Pump=2.37854732E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00402379586324253
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00402379586324253
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00407766394320779
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00407766394320779
+Measurement, scan 1, Delay Delay 2.00140098E-001 3.99998749E+001
+Pump=2.37256896E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0032159518142148
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0032159518142148
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00365343480716523
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00365343480716523
+Measurement, scan 1, Delay Delay 2.50175123E-001 3.99998749E+001
+Pump=2.36660847E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00589803055702054
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00589803055702054
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00552398182521813
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00552398182521813
+Measurement, scan 1, Delay Delay 3.00210147E-001 3.99998749E+001
+Pump=2.37043510E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00431965466308697
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00431965466308697
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00484451188132332
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00484451188132332
+Measurement, scan 1, Delay Delay 3.50245172E-001 3.99998749E+001
+Pump=2.36759195E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00478827174340067
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00478827174340067
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0043655046576125
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0043655046576125
+Measurement, scan 1, Delay Delay 4.00280196E-001 3.99998749E+001
+Pump=2.37151395E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00622880598938723
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00622880598938723
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00665261648534759
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00665261648534759
+Measurement, scan 1, Delay Delay 4.50315221E-001 3.99998749E+001
+Pump=2.35550408E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.004441235342036
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.004441235342036
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00418622986666348
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00418622986666348
+Measurement, scan 1, Delay Delay 5.00350245E-001 3.99998749E+001
+Pump=2.35923237E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00420200447225885
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00420200447225885
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00505695537950231
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00505695537950231
+Measurement, scan 1, Delay Delay 5.50385270E-001 3.99998749E+001
+Pump=2.37422597E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00402604917166443
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00402604917166443
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00439409176145293
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00439409176145293
+Measurement, scan 1, Delay Delay 6.00420294E-001 3.99998749E+001
+Pump=2.38131001E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00611009131063601
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00611009131063601
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0059169053629088
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0059169053629088
+Measurement, scan 1, Delay Delay 6.50455319E-001 3.99998749E+001
+Pump=2.37206231E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00476326154560551
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00476326154560551
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00482426141753605
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00482426141753605
+Measurement, scan 1, Delay Delay 7.00490343E-001 3.99998749E+001
+Pump=2.37656844E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00505263518529533
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00505263518529533
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00518088863636035
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00518088863636035
+Measurement, scan 1, Delay Delay 7.50525368E-001 3.99998749E+001
+Pump=2.38031163E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00459102577927915
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00459102577927915
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00438733210043883
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00438733210043883
+Measurement, scan 1, Delay Delay 8.00560392E-001 3.99998749E+001
+Pump=2.37047384E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00483426254929435
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00483426254929435
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00521563671300096
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00521563671300096
+Measurement, scan 1, Delay Delay 8.50595417E-001 3.99998749E+001
+Pump=2.36445375E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00475123211889094
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00475123211889094
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00477227105342172
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00477227105342172
+Measurement, scan 1, Delay Delay 9.00630441E-001 3.99998749E+001
+Pump=2.37601412E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00488853794869962
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00488853794869962
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00522036880926911
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00522036880926911
+Measurement, scan 1, Delay Delay 9.50665466E-001 3.99998749E+001
+Pump=2.37150799E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00526024005346835
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00526024005346835
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0052891853925457
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0052891853925457
+Measurement, scan 1, Delay Delay 1.00070049E+000 3.99998749E+001
+Pump=2.37049173E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00549769343657072
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00549769343657072
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00552235045542062
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00552235045542062
+Measurement, scan 1, Delay Delay 1.10077054E+000 3.99998749E+001
+Pump=2.37651182E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00488879242425469
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00488879242425469
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00580366506705649
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00580366506705649
+Measurement, scan 1, Delay Delay 1.20084059E+000 3.99998749E+001
+Pump=2.36825952E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00593878844299837
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00593878844299837
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0061390306230757
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0061390306230757
+Measurement, scan 1, Delay Delay 1.30091064E+000 3.99998749E+001
+Pump=2.37317991E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00456651351886081
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00456651351886081
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.004550782107366
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.004550782107366
+Measurement, scan 1, Delay Delay 1.40098069E+000 3.99998749E+001
+Pump=2.37726582E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00587069059134362
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00587069059134362
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00507379756434591
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00507379756434591
+Measurement, scan 1, Delay Delay 1.49896594E+000 3.99998749E+001
+Pump=2.37692011E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00480658421401758
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00480658421401758
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00536999770170238
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00536999770170238
+Measurement, scan 1, Delay Delay 1.59903599E+000 3.99998749E+001
+Pump=2.37086426E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00558017198846927
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00558017198846927
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00525175478456265
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00525175478456265
+Measurement, scan 1, Delay Delay 1.69910604E+000 3.99998749E+001
+Pump=2.36383088E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00432194821078922
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00432194821078922
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00545830924048009
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00545830924048009
+Measurement, scan 1, Delay Delay 1.79917609E+000 3.99998749E+001
+Pump=2.36828635E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00467443970988972
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00467443970988972
+NotPumpedSignalCount=210, TotalSignalCount=499, NotPumpedSignalDeviation=0.00514211077864306
+NotPumpedSignalCount=210, TotalSignalCount=499, NotPumpedSignalDeviation=0.00514211077864306
+Measurement, scan 1, Delay Delay 1.89924614E+000 3.99998749E+001
+Pump=2.36121125E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00494700822646476
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00494700822646476
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0062481482491999
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0062481482491999
+Measurement, scan 1, Delay Delay 1.99931619E+000 3.99998749E+001
+Pump=2.35641902E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00548690265177196
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00548690265177196
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0057247894755574
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0057247894755574
+Measurement, scan 1, Delay Delay 2.19945629E+000 3.99998749E+001
+Pump=2.34105884E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00491305837105461
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00491305837105461
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00544937715583614
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00544937715583614
+Measurement, scan 1, Delay Delay 2.39959638E+000 3.99998749E+001
+Pump=2.35927707E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00433974674071856
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00433974674071856
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00455178872012479
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00455178872012479
+Measurement, scan 1, Delay Delay 2.59973648E+000 3.99998749E+001
+Pump=2.36618527E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00504529405059525
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00504529405059525
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00534266698431505
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00534266698431505
+Measurement, scan 1, Delay Delay 2.79987658E+000 3.99998749E+001
+Pump=2.36557432E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00492950257036911
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00492950257036911
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00536516586021911
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00536516586021911
+Measurement, scan 1, Delay Delay 3.00001668E+000 3.99998749E+001
+Pump=2.37040232E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00528266748201233
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00528266748201233
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00520664996222496
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00520664996222496
+Measurement, scan 1, Delay Delay 3.20015678E+000 3.99998749E+001
+Pump=2.37295639E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.0044722197672324
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.0044722197672324
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00531000724872459
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00531000724872459
+Measurement, scan 1, Delay Delay 3.40029687E+000 3.99998749E+001
+Pump=2.36124701E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00533529247649421
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00533529247649421
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00543353749828246
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00543353749828246
+Measurement, scan 1, Delay Delay 3.60043697E+000 3.99998749E+001
+Pump=2.36472197E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00418833240628022
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00418833240628022
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00477891643655426
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00477891643655426
+Measurement, scan 1, Delay Delay 3.80057707E+000 3.99998749E+001
+Pump=2.36563393E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00567401105761639
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00567401105761639
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00582290462787623
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00582290462787623
+Measurement, scan 1, Delay Delay 4.00071717E+000 3.99998749E+001
+Pump=2.36497828E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00430062810103831
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00430062810103831
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00553513538857553
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00553513538857553
+Measurement, scan 1, Delay Delay 4.20085727E+000 3.99998749E+001
+Pump=2.35134962E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00573306652186227
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00573306652186227
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00518413178126735
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00518413178126735
+Measurement, scan 1, Delay Delay 4.40099736E+000 3.99998749E+001
+Pump=2.34810712E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00499949009517049
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00499949009517049
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.005582704447576
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.005582704447576
+Measurement, scan 1, Delay Delay 4.59905267E+000 3.99998749E+001
+Pump=2.34961214E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00477434313550376
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00477434313550376
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00446532290118453
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00446532290118453
+Measurement, scan 1, Delay Delay 4.79919277E+000 3.99998749E+001
+Pump=2.34195887E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00437252593620616
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00437252593620616
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00542907596748316
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00542907596748316
+Measurement, scan 1, Delay Delay 4.99933287E+000 3.99998749E+001
+Pump=2.35972113E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00457257045911108
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00457257045911108
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00488731521047407
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00488731521047407
+Measurement, scan 1, Delay Delay 5.49968311E+000 3.99998749E+001
+Pump=2.36170895E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00473959439075596
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00473959439075596
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0049790686084794
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0049790686084794
+Measurement, scan 1, Delay Delay 6.00003336E+000 3.99998749E+001
+Pump=2.36189074E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00469149973089513
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00469149973089513
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00515871091514955
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00515871091514955
+Measurement, scan 1, Delay Delay 6.50038360E+000 3.99998749E+001
+Pump=2.35260132E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00475411939092112
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00475411939092112
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00560822998914329
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00560822998914329
+Measurement, scan 1, Delay Delay 7.00073385E+000 3.99998749E+001
+Pump=2.35303942E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00509935085244019
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00509935085244019
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00475673324522601
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00475673324522601
+Measurement, scan 1, Delay Delay 7.49899930E+000 3.99998749E+001
+Pump=2.36031121E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00427827680195866
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00427827680195866
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00438618322815955
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00438618322815955
+Measurement, scan 1, Delay Delay 7.99934954E+000 3.99998749E+001
+Pump=2.35881215E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00550281665830965
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00550281665830965
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00537007264656489
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00537007264656489
+Measurement, scan 1, Delay Delay 8.49969979E+000 3.99998749E+001
+Pump=2.35651140E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00480243749990195
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00480243749990195
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0048910702275954
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0048910702275954
+Measurement, scan 1, Delay Delay 9.00005004E+000 3.99998749E+001
+Pump=2.35346261E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00566669654405861
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00566669654405861
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00596675340836396
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00596675340836396
+Measurement, scan 1, Delay Delay 9.50040028E+000 3.99998749E+001
+Pump=2.34336257E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00483670076435739
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00483670076435739
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00469544741305771
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00469544741305771
+Measurement, scan 1, Delay Delay 1.00007505E+001 3.99998749E+001
+Pump=2.34375298E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00436891654751784
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00436891654751784
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00585623035582545
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00585623035582545
+Measurement, scan 1, Delay Delay 1.09993662E+001 3.99998749E+001
+Pump=2.36080891E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00445537553037758
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00445537553037758
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00496112199805825
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00496112199805825
+Measurement, scan 1, Delay Delay 1.20000667E+001 3.99998749E+001
+Pump=2.36212916E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00457141246012931
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00457141246012931
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00526543685576403
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00526543685576403
+Measurement, scan 1, Delay Delay 1.30007672E+001 3.99998749E+001
+Pump=2.36346729E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.0064037225577017
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.0064037225577017
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00597384398065606
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00597384398065606
+Measurement, scan 1, Delay Delay 1.39993829E+001 3.99998749E+001
+Pump=2.35756939E-001
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00405371815273846
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00405371815273846
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00576921959272137
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00576921959272137
+Measurement, scan 1, Delay Delay 1.50000834E+001 3.99998749E+001
+Pump=2.35985822E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00654983468315516
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00654983468315516
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00648629126356319
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00648629126356319
+Measurement, scan 1, Delay Delay 1.60007839E+001 3.99998749E+001
+Pump=2.35082212E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00535414829627666
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00535414829627666
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00617441853753838
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00617441853753838
+Measurement, scan 1, Delay Delay 1.69993996E+001 3.99998749E+001
+Pump=2.35356394E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00693576509242776
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00693576509242776
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00708227405496539
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00708227405496539
+Measurement, scan 1, Delay Delay 1.80001001E+001 3.99998749E+001
+Pump=2.34373808E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00487071128406425
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00487071128406425
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00525035444770971
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00525035444770971
+Measurement, scan 1, Delay Delay 1.90008006E+001 3.99998749E+001
+Pump=2.33569440E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00531705499814311
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00531705499814311
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00622729298070471
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00622729298070471
+Measurement, scan 1, Delay Delay 1.99994163E+001 3.99998749E+001
+Pump=2.31971434E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00478632515872082
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00478632515872082
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00518393371724412
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00518393371724412
+Measurement, scan 1, Delay Delay 2.20008172E+001 3.99998749E+001
+Pump=2.33517286E-001
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00589167033774548
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00589167033774548
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00755046788477249
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00755046788477249
+Measurement, scan 1, Delay Delay 2.40001334E+001 3.99998749E+001
+Pump=2.34214365E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00715459611336374
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00715459611336374
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00711720914340995
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00711720914340995
+Measurement, scan 1, Delay Delay 2.59994496E+001 3.99998749E+001
+Pump=2.33943163E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00526834314483597
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00526834314483597
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00576915217064355
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00576915217064355
+Measurement, scan 1, Delay Delay 2.80008506E+001 3.99998749E+001
+Pump=2.34689416E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00510887617466635
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00510887617466635
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00577142194048257
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00577142194048257
+Measurement, scan 1, Delay Delay 3.00001668E+001 3.99998749E+001
+Pump=2.35441927E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00768637233148895
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00768637233148895
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.0078582105956434
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.0078582105956434
+Measurement, scan 1, Delay Delay 3.19994830E+001 3.99998749E+001
+Pump=2.35970324E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00480275135886978
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00480275135886978
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00559793510547082
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00559793510547082
+Measurement, scan 1, Delay Delay 3.40008840E+001 3.99998749E+001
+Pump=2.35929495E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00695926472205912
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00695926472205912
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00633881329481249
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00633881329481249
+Measurement, scan 1, Delay Delay 3.60002001E+001 3.99998749E+001
+Pump=2.34806539E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00557458026180154
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00557458026180154
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00549939191792656
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00549939191792656
+Measurement, scan 1, Delay Delay 3.79995163E+001 3.99998749E+001
+Pump=2.35787337E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00536304737510532
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00536304737510532
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00660122658657624
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00660122658657624
+Measurement, scan 1, Delay Delay 4.00009173E+001 3.99998749E+001
+Pump=2.35111716E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00618810601216467
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00618810601216467
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00559735849345693
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00559735849345693
+Measurement, scan 1, Delay Delay 4.20002335E+001 3.99998749E+001
+Pump=2.35345665E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00498903136045732
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00498903136045732
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00534904081195884
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00534904081195884
+Measurement, scan 1, Delay Delay 4.39995497E+001 3.99998749E+001
+Pump=2.36238546E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00593600710188139
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00593600710188139
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0066165802706424
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0066165802706424
+Measurement, scan 1, Delay Delay 4.60009507E+001 3.99998749E+001
+Pump=2.36726114E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00711101801769199
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00711101801769199
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00705534603385338
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00705534603385338
+Measurement, scan 1, Delay Delay 4.80002669E+001 3.99998749E+001
+Pump=2.36814925E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00549748331620482
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00549748331620482
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00652244189674655
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00652244189674655
+Measurement, scan 1, Delay Delay 4.99995830E+001 3.99998749E+001
+Pump=2.37436306E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00646708081032811
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00646708081032811
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00605022406367336
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00605022406367336
+Measurement, scan 1, Delay Delay 5.50010007E+001 3.99998749E+001
+Pump=2.34813990E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00561382677563523
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00561382677563523
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00573422394089187
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00573422394089187
+Measurement, scan 1, Delay Delay 6.00003336E+001 3.99998749E+001
+Pump=2.34307050E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00624606320141869
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00624606320141869
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00658513365072358
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00658513365072358
+Measurement, scan 1, Delay Delay 6.49996664E+001 3.99998749E+001
+Pump=2.34524608E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00721563357553694
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00721563357553694
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00769576236343592
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00769576236343592
+Measurement, scan 1, Delay Delay 6.99989993E+001 3.99998749E+001
+Pump=2.37855030E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00617320047899252
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00617320047899252
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00561270906858597
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00561270906858597
+Measurement, scan 1, Delay Delay 7.50004170E+001 3.99998749E+001
+Pump=2.33404037E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00503466369553595
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00503466369553595
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00627885692999599
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00627885692999599
+Measurement, scan 1, Delay Delay 7.99997498E+001 3.99998749E+001
+Pump=2.34074591E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00591805709332791
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00591805709332791
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00691884433428467
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00691884433428467
+Measurement, scan 1, Delay Delay 8.49990827E+001 3.99998749E+001
+Pump=2.34521628E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00614408957115834
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00614408957115834
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00570228088645988
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00570228088645988
+Measurement, scan 1, Delay Delay 9.00005004E+001 3.99998749E+001
+Pump=2.35294405E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00459105326423955
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00459105326423955
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00467321575207539
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00467321575207539
+Measurement, scan 1, Delay Delay 9.49998332E+001 3.99998749E+001
+Pump=2.36953507E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00553701070315393
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00553701070315393
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0072721103868866
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.0072721103868866
+Measurement, scan 1, Delay Delay 9.99991661E+001 3.99998749E+001
+Pump=2.35358182E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00643668233446364
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00643668233446364
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.006268194715227
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.006268194715227
+Measurement, scan 1, Delay Delay 1.09999917E+002 3.99998749E+001
+Pump=2.35142413E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00574199477128119
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00574199477128119
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00556142461062132
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00556142461062132
+Measurement, scan 1, Delay Delay 1.20000667E+002 3.99998749E+001
+Pump=2.35131982E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00488595493796423
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00488595493796423
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00530854987425802
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00530854987425802
+Measurement, scan 1, Delay Delay 1.29999333E+002 3.99998749E+001
+Pump=2.36868570E-001
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00491233321591154
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00491233321591154
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00630837169512472
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00630837169512472
+Measurement, scan 1, Delay Delay 1.40000083E+002 3.99998749E+001
+Pump=2.36091024E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00679769025600279
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00679769025600279
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00787559952267114
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00787559952267114
+Measurement, scan 1, Delay Delay 1.50000834E+002 3.99998749E+001
+Pump=2.34329700E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00647385369371342
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00647385369371342
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00669106215903194
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00669106215903194
+Measurement, scan 1, Delay Delay 1.59999500E+002 3.99998749E+001
+Pump=2.33931838E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00665056547916973
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00665056547916973
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0055620300143467
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0055620300143467
+Measurement, scan 1, Delay Delay 1.70000250E+002 3.99998749E+001
+Pump=2.35279802E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00546094343380297
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00546094343380297
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00539345221654913
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00539345221654913
+Measurement, scan 1, Delay Delay 1.80001001E+002 3.99998749E+001
+Pump=2.34692396E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00534831343640898
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00534831343640898
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00614845840218087
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00614845840218087
+Measurement, scan 1, Delay Delay 1.89999666E+002 3.99998749E+001
+Pump=2.34646798E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00492172832271799
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00492172832271799
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00555527140672764
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00555527140672764
+Measurement, scan 1, Delay Delay 2.00000417E+002 3.99998749E+001
+Pump=2.34048663E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00566622229342403
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00566622229342403
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0066010460780518
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0066010460780518
+Measurement, scan 1, Delay Delay 2.19999833E+002 3.99998749E+001
+Pump=2.33986674E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00508473064643633
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00508473064643633
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00637676875696715
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00637676875696715
+Measurement, scan 1, Delay Delay 2.39999249E+002 3.99998749E+001
+Pump=2.33540234E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00484730414099765
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00484730414099765
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00593618881541123
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00593618881541123
+Measurement, scan 1, Delay Delay 2.60000751E+002 3.99998749E+001
+Pump=2.36622998E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00607476921637911
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00607476921637911
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00743619135793852
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00743619135793852
+Measurement, scan 1, Delay Delay 2.80000167E+002 3.99998749E+001
+Pump=2.36230798E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00472949302342084
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00472949302342084
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00578436836675647
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00578436836675647
+Measurement, scan 1, Delay Delay 2.99999583E+002 3.99998749E+001
+Pump=2.36161656E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00508969568436915
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00508969568436915
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00613002035571445
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00613002035571445
+Measurement, scan 1, Delay Delay 3.19998999E+002 3.99998749E+001
+Pump=2.35094133E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00575226719662569
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00575226719662569
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00623856921969573
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00623856921969573
+Measurement, scan 1, Delay Delay 3.40000500E+002 3.99998749E+001
+Pump=2.35695546E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00519736189475103
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00519736189475103
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00614002654301473
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00614002654301473
+Measurement, scan 1, Delay Delay 3.59999917E+002 3.99998749E+001
+Pump=2.33754215E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00547624399228895
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00547624399228895
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00616334333746464
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00616334333746464
+Measurement, scan 1, Delay Delay 3.79999333E+002 3.99998749E+001
+Pump=2.33557817E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00480478871079535
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00480478871079535
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00506429166863597
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00506429166863597
+Measurement, scan 1, Delay Delay 4.00000834E+002 3.99998749E+001
+Pump=2.34082042E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.007224606408923
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.007224606408923
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00772165995800714
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00772165995800714
+Measurement, scan 1, Delay Delay 4.20000250E+002 3.99998749E+001
+Pump=2.35145989E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00688775321620465
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00688775321620465
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00712996864198301
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00712996864198301
+Measurement, scan 1, Delay Delay 4.39999666E+002 3.99998749E+001
+Pump=2.35652332E-001
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00495641616577488
+PumpedSignalCount=235, TotalSignalCount=499, PumpedSignalDeviation=0.00495641616577488
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.005939822946607
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.005939822946607
+Measurement, scan 1, Delay Delay 4.59999083E+002 3.99998749E+001
+Pump=2.35197845E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00574492422208258
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00574492422208258
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00529119619857236
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00529119619857236
+Measurement, scan 1, Delay Delay 4.80000584E+002 3.99998749E+001
+Pump=2.34521330E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00426831740826334
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00426831740826334
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00546448298614711
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00546448298614711
+Measurement, scan 1, Delay Delay 5.00000000E+002 3.99998749E+001
+Pump=2.36836085E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00409949326237691
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00409949326237691
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00486783163158571
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00486783163158571
+Measurement, scan 1, Delay Delay 5.49999583E+002 3.99998749E+001
+Pump=2.34718622E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00452362877515814
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00452362877515814
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00498273031152064
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00498273031152064
+Measurement, scan 1, Delay Delay 5.99999166E+002 3.99998749E+001
+Pump=2.36240931E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00544566252476212
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00544566252476212
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00558160681027675
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00558160681027675
+Measurement, scan 1, Delay Delay 6.50000834E+002 3.99998749E+001
+Pump=2.34398544E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00462709847097053
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00462709847097053
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00513385920586878
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00513385920586878
+Measurement, scan 1, Delay Delay 7.00000417E+002 3.99998749E+001
+Pump=2.35375170E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00522802206662677
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00522802206662677
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00528758903976833
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00528758903976833
+Measurement, scan 1, Delay Delay 7.50000000E+002 3.99998749E+001
+Pump=2.35330168E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00399184508515012
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00399184508515012
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00504316867088991
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00504316867088991
+Measurement, scan 1, Delay Delay 7.99999583E+002 3.99998749E+001
+Pump=2.34565438E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00368038689784328
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00368038689784328
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00420564797134651
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00420564797134651
+Measurement, scan 1, Delay Delay 8.49999166E+002 3.99998749E+001
+Pump=2.35043469E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00485622121233251
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00485622121233251
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00447076321394244
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00447076321394244
+Measurement, scan 1, Delay Delay 9.00000834E+002 3.99998749E+001
+Pump=2.36882875E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00426722531095341
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00426722531095341
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00501755694667652
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00501755694667652
+Measurement, scan 1, Delay Delay 9.50000417E+002 3.99998749E+001
+Pump=2.37594855E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00556553906374854
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00556553906374854
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00572764971851188
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00572764971851188
+Measurement, scan 1, Delay Delay 1.00000000E+003 3.99998749E+001
+Pump=2.32834512E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00731832324988052
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00731832324988052
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00718461359839591
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00718461359839591
+Measurement, scan 1, Delay Delay 1.09999917E+003 3.99998749E+001
+Pump=2.33584639E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00766818320486237
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00766818320486237
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00740528668796463
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00740528668796463
+Measurement, scan 1, Delay Delay 1.20000042E+003 3.99998749E+001
+Pump=2.33320888E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00745953828543916
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00745953828543916
+NotPumpedSignalCount=210, TotalSignalCount=499, NotPumpedSignalDeviation=0.00762661428168127
+NotPumpedSignalCount=210, TotalSignalCount=499, NotPumpedSignalDeviation=0.00762661428168127
+Measurement, scan 1, Delay Delay 1.29999958E+003 3.99998749E+001
+Pump=2.33245786E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00319715416957554
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00319715416957554
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00414706537755465
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00414706537755465
+Measurement, scan 1, Delay Delay 1.40000083E+003 3.99998749E+001
+Pump=2.34078764E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00467998580435215
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00467998580435215
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00487499409229183
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00487499409229183
+Measurement, scan 1, Delay Delay 1.50000000E+003 3.99998749E+001
+Pump=2.34681667E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00503763823664302
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00503763823664302
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00487898994231922
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00487898994231922
+Measurement, scan 1, Delay Delay 1.59999917E+003 3.99998749E+001
+Pump=2.32955808E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00412268631469716
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00412268631469716
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00398407399817855
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00398407399817855
+Measurement, scan 1, Delay Delay 1.70000042E+003 3.99998749E+001
+Pump=2.34001575E-001
+PumpedSignalCount=234, TotalSignalCount=499, PumpedSignalDeviation=0.00698063960850523
+PumpedSignalCount=234, TotalSignalCount=499, PumpedSignalDeviation=0.00698063960850523
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00729533340123227
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00729533340123227
+Measurement, scan 1, Delay Delay 1.79999958E+003 3.99998749E+001
+Pump=2.35030654E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00476417144078672
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00476417144078672
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00446331328310509
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00446331328310509
+Measurement, scan 1, Delay Delay 1.90000083E+003 3.99998749E+001
+Pump=2.35992080E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00631833368938054
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00631833368938054
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00619173850307718
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00619173850307718
+Measurement, scan 1, Delay Delay 2.00000000E+003 3.99998749E+001
+Pump=2.36176557E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00622083049071656
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00622083049071656
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00630660565524511
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00630660565524511
+Measurement, scan 1, Delay Delay 2.20000042E+003 3.99998749E+001
+Pump=2.36150033E-001
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00374140365305801
+PumpedSignalCount=244, TotalSignalCount=499, PumpedSignalDeviation=0.00374140365305801
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00359356060025681
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00359356060025681
+Measurement, scan 1, Delay Delay 2.40000083E+003 3.99998749E+001
+Pump=2.36063606E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00483505622790069
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00483505622790069
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00506471634512555
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00506471634512555
+Measurement, scan 1, Delay Delay 2.59999917E+003 3.99998749E+001
+Pump=2.34252214E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00716661786557436
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00716661786557436
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00726782063614048
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00726782063614048
+Measurement, scan 1, Delay Delay 2.79999958E+003 3.99998749E+001
+Pump=2.35686605E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00727047067786984
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00727047067786984
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00715439635912244
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00715439635912244
+Measurement, scan 1, Delay Delay 3.00000000E+003 3.99998749E+001
+Pump=2.36030525E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00495040115832424
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00495040115832424
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00504686679119199
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00504686679119199
+Measurement, scan 1, Delay Delay 3.20000042E+003 3.99998749E+001
+Pump=2.35983437E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0363953066687184
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0363953066687184
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.036049243372603
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.036049243372603
+Measurement, scan 1, Delay Delay 3.40000083E+003 3.99998749E+001
+Pump=2.35330168E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.0407824380007934
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.0407824380007934
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0406263142049801
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0406263142049801
+Measurement, scan 1, Delay Delay 3.59999917E+003 3.99998749E+001
+Pump=2.36003405E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00376532694678524
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00376532694678524
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0036795506721471
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.0036795506721471
+Measurement, scan 1, Delay Delay 3.79999958E+003 3.99998749E+001
+Pump=2.36038572E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.0412956601493506
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.0412956601493506
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0414436812703703
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0414436812703703
+Measurement, scan 1, Delay Delay 4.00000000E+003 3.99998749E+001
+Pump=2.35943800E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00837740838712871
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00837740838712871
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00826698778150956
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00826698778150956
+Measurement, scan 1, Delay Delay 4.20000042E+003 3.99998749E+001
+Pump=2.34842898E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.0139483052014699
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.0139483052014699
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0145600521397009
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0145600521397009
+Measurement, scan 1, Delay Delay 4.40000083E+003 3.99998749E+001
+Pump=2.36172385E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00912250980097163
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00912250980097163
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00921471806481513
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00921471806481513
+Measurement, scan 1, Delay Delay 4.59999917E+003 3.99998749E+001
+Pump=2.37040828E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0163201954713263
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.0163201954713263
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.015908944931567
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.015908944931567
+Measurement, scan 1, Delay Delay 4.79999958E+003 3.99998749E+001
+Pump=2.35783165E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.012479098462727
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.012479098462727
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0126275159929286
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0126275159929286
+Measurement, scan 1, Delay Delay 5.00000000E+003 3.99998749E+001
+Pump=2.33555433E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00609206564559258
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00609206564559258
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00597401475203667
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00597401475203667
+Measurement, scan 1, Delay Delay 5.40000083E+003 3.99998749E+001
+Pump=2.35701804E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00573579092284082
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00573579092284082
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00593311373790882
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00593311373790882
+Measurement, scan 1, Delay Delay 5.79999958E+003 3.99998749E+001
+Pump=2.34350860E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.0163210873320503
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.0163210873320503
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0165797320618481
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0165797320618481
+Measurement, scan 1, Delay Delay 6.20000042E+003 3.99998749E+001
+Pump=2.35717004E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00408532420520928
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00408532420520928
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00419681921227857
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00419681921227857
+Measurement, scan 1, Delay Delay 6.59999917E+003 3.99998749E+001
+Pump=2.35144499E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00672888225618166
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00672888225618166
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00656687186668414
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00656687186668414
+Measurement, scan 1, Delay Delay 7.00000000E+003 3.99998749E+001
+Pump=2.34628023E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.0187857870875972
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.0187857870875972
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.0187335289591894
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.0187335289591894
+Background, scan 2, Delay -1.00007505E+001 3.99998749E+001
+Pump=2.35391561E-001
+PumpedSignalCount=1204, TotalSignalCount=2495, PumpedSignalDeviation=0.00173563038168877
+PumpedSignalCount=1204, TotalSignalCount=2495, PumpedSignalDeviation=0.00173563038168877
+NotPumpedSignalCount=1039, TotalSignalCount=2495, NotPumpedSignalDeviation=0.00174967374901143
+NotPumpedSignalCount=1039, TotalSignalCount=2495, NotPumpedSignalDeviation=0.00174967374901143
+Measurement, scan 2, Delay Delay -1.00007505E+001 3.99998749E+001
+Pump=2.37200867E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00316758251923686
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00316758251923686
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00317072509375892
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00317072509375892
+Measurement, scan 2, Delay Delay -9.00005004E+000 3.99998749E+001
+Pump=2.36455806E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00337281155372772
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00337281155372772
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00339237767137837
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00339237767137837
+Measurement, scan 2, Delay Delay -7.99934954E+000 3.99998749E+001
+Pump=2.37395179E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00227851508948672
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00227851508948672
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00227538943804887
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00227538943804887
+Measurement, scan 2, Delay Delay -7.00073385E+000 3.99998749E+001
+Pump=2.37297427E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00268297128865744
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00268297128865744
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00260620498120754
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00260620498120754
+Measurement, scan 2, Delay Delay -6.00003336E+000 3.99998749E+001
+Pump=2.40966703E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00267057453632488
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00267057453632488
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00273884251831937
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00273884251831937
+Measurement, scan 2, Delay Delay -4.99933287E+000 3.99998749E+001
+Pump=2.39304621E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.0025524471132615
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.0025524471132615
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00256089288925103
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00256089288925103
+Measurement, scan 2, Delay Delay -4.00071717E+000 3.99998749E+001
+Pump=2.39202101E-001
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00316764104372124
+PumpedSignalCount=242, TotalSignalCount=499, PumpedSignalDeviation=0.00316764104372124
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00351272796494803
+NotPumpedSignalCount=209, TotalSignalCount=499, NotPumpedSignalDeviation=0.00351272796494803
+Measurement, scan 2, Delay Delay -3.00001668E+000 3.99998749E+001
+Pump=2.36853371E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00268461841864432
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00268461841864432
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00268922811829102
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00268922811829102
+Measurement, scan 2, Delay Delay -1.99931619E+000 3.99998749E+001
+Pump=2.36696312E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00233543529688932
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00233543529688932
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00237915987423308
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00237915987423308
+Measurement, scan 2, Delay Delay -1.00070049E+000 3.99998749E+001
+Pump=2.36042148E-001
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00275102471231938
+PumpedSignalCount=240, TotalSignalCount=499, PumpedSignalDeviation=0.00275102471231938
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00270210906706852
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00270210906706852
+Measurement, scan 2, Delay Delay -9.50665466E-001 3.99998749E+001
+Pump=2.37548065E-001
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00227697787037408
+PumpedSignalCount=238, TotalSignalCount=499, PumpedSignalDeviation=0.00227697787037408
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00228864607206769
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00228864607206769
+Measurement, scan 2, Delay Delay -9.00630441E-001 3.99998749E+001
+Pump=2.39389260E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00328049652880111
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00328049652880111
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00327377289956583
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00327377289956583
+Measurement, scan 2, Delay Delay -8.50595417E-001 3.99998749E+001
+Pump=2.38876956E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00236685942049029
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00236685942049029
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00234660089676197
+NotPumpedSignalCount=205, TotalSignalCount=499, NotPumpedSignalDeviation=0.00234660089676197
+Measurement, scan 2, Delay Delay -8.00560392E-001 3.99998749E+001
+Pump=2.37987651E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00343580657509444
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00343580657509444
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00347730831195036
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00347730831195036
+Measurement, scan 2, Delay Delay -7.50525368E-001 3.99998749E+001
+Pump=2.37968876E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.0040505572276461
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.0040505572276461
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00405535872644563
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00405535872644563
+Measurement, scan 2, Delay Delay -7.00490343E-001 3.99998749E+001
+Pump=2.38576249E-001
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00348649038844764
+PumpedSignalCount=241, TotalSignalCount=499, PumpedSignalDeviation=0.00348649038844764
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00356758734615371
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00356758734615371
+Measurement, scan 2, Delay Delay -6.50455319E-001 3.99998749E+001
+Pump=2.37652970E-001
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00238160906985605
+PumpedSignalCount=239, TotalSignalCount=499, PumpedSignalDeviation=0.00238160906985605
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00243073706119044
+NotPumpedSignalCount=206, TotalSignalCount=499, NotPumpedSignalDeviation=0.00243073706119044
+Measurement, scan 2, Delay Delay -6.00420294E-001 3.99998749E+001
+Pump=2.36698696E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00379565607739761
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00379565607739761
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00374370616695314
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.00374370616695314
+Measurement, scan 2, Delay Delay -5.50385270E-001 3.99998749E+001
+Pump=2.36960659E-001
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00260944107036548
+PumpedSignalCount=236, TotalSignalCount=499, PumpedSignalDeviation=0.00260944107036548
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00258482095604478
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00258482095604478
+Measurement, scan 2, Delay Delay -5.00350245E-001 3.99998749E+001
+Pump=2.36541637E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00232647611140151
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00232647611140151
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0023539352559315
+NotPumpedSignalCount=207, TotalSignalCount=499, NotPumpedSignalDeviation=0.0023539352559315
+Measurement, scan 2, Delay Delay -4.50315221E-001 3.99998749E+001
+Pump=2.36622402E-001
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00362813329396018
+PumpedSignalCount=237, TotalSignalCount=499, PumpedSignalDeviation=0.00362813329396018
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00340130664941938
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00340130664941938
+Measurement, scan 2, Delay Delay -4.48230428E-001 3.99998749E+001
+Pump=2.37101923E-001
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00299101869563733
+PumpedSignalCount=243, TotalSignalCount=499, PumpedSignalDeviation=0.00299101869563733
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00301650576274427
+NotPumpedSignalCount=208, TotalSignalCount=499, NotPumpedSignalDeviation=0.00301650576274427
+Measurement finished: 2025.02.12 20:51:40.258

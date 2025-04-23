@@ -1,0 +1,236 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 22 16:47:16 2025
+
+@author: David Tiede
+"""
+
+import os                       
+import numpy as np              
+import matplotlib.pyplot as plt 
+import h5py                     
+
+from pathlib import Path
+from helper_functions import utils as ut
+
+class Bigfoot:
+                       
+    def transform_to_HDF5(data_folder,output_path):
+        """ Transform Bigfoot data to .hdf5 file 
+        
+        Args:
+            data_folder (str): full path to the data as saved from Bigfoot software
+        
+        Returns: .hdf5 file 
+        """
+        
+        #### load data ####
+        # find data files in data folder
+        files_raw = [file for file in os.listdir(data_folder) if file.find('.tsv')!= -1]
+        header_file = [file for file in os.listdir(data_folder) if file.find('Header.txt')!= -1][0]
+        subfolder = [file for file in os.listdir(data_folder) if file.find('_Averages')!= -1][0]
+        subfolder_files = os.listdir(data_folder + subfolder)
+
+        # process header data in separate function
+        header = Bigfoot_helper_functions.parse_mdcs_header_to_dict(data_folder + header_file)
+
+        # order files in data dictionary 
+        filenames = ['2DSpec_amp','2DSpec_phase','Linear_amp','TimeSpec_amp','TimeSpec_phase']
+        subfolder_filenames = ['2DSpec_amp','2DSpec_phase','Linear_amp','RefAB_pos0']
+        data = {}
+        data['raw'] = {} 
+        for file in files_raw: # treat averaged data
+            for f in filenames: 
+                if file.find(f)!= -1:
+                    data['raw'][f] = np.loadtxt(data_folder + file)
+        avg = list(range(len(subfolder_files))) # order individual scans in avg sub-directories
+        for i,file in enumerate(subfolder_files):
+            avg[i] = file[file.find('avg'):file.find('.tsv')]
+        avg = np.unique(avg)
+        for av in avg:
+            data[av]= {}
+        for file in subfolder_files: 
+            for f in subfolder_filenames: 
+                if file.find(f)!= -1:
+                    av = file[file.find('avg'):file.find('.tsv')]
+                    data[av][f] = np.loadtxt(data_folder + subfolder +'\\' + file)
+                    
+        #### process data ####
+        # extract valid range from header
+        range_min = float(header['scan_params']['Plot range min (units)'])
+        range_max = float(header['scan_params']['Plot range max (units)'])
+
+        # get 2D axis from header
+        em_axis = np.array(header['emission_energy'])
+        ex_axis = np.array(header['stepped_axis_energy'])
+
+        # find indices for valid range 
+        em_range = np.r_[ut.find_idx(em_axis,range_min):ut.find_idx(em_axis,range_max)]
+        ex_range = np.r_[ut.find_idx(ex_axis,-range_max):ut.find_idx(ex_axis,-range_min)] 
+
+        # crop 2D data to valid range
+        amp_2D_data = data['raw']['2DSpec_amp'][em_range[0]:em_range[-1],ex_range[0]:ex_range[-1]]
+        phase_2D_data = data['raw']['2DSpec_phase'][em_range[0]:em_range[-1],ex_range[0]:ex_range[-1]]
+        
+        # store processed data
+        data['em_axis'] = em_axis[em_range[:-1]]
+        data['ex_axis'] = ex_axis[ex_range[:-1]]
+        data['2Dabs'] = amp_2D_data
+        data['2Dreal'] = amp_2D_data*np.sin(phase_2D_data)
+        data['2Dimag'] = amp_2D_data*np.cos(phase_2D_data)
+        
+        #### save to HDF5 ####
+        with h5py.File(output_path, 'w') as hdf:
+            # Save all numerical arrays
+            for key, value in data.items():
+                if isinstance(value, np.ndarray):
+                    hdf.create_dataset(f"data/{key}", data=value)
+                elif isinstance(value, dict):
+                    grp = hdf.create_group(f"data/{key}")
+                    for subkey, subval in value.items():
+                        grp.create_dataset(subkey, data=subval)
+        
+            # Save header information
+            header_grp = hdf.create_group("header")
+            for key, val in header.items():
+                if isinstance(val, (str, float, int)):
+                    header_grp.attrs[key] = val
+                elif isinstance(val, (list, np.ndarray)):
+                    arr = np.array(val)
+                    if arr.dtype.kind in {'U', 'S'}:  # it's a string or unicode string array
+                        header_grp.attrs[key] = [str(x) for x in arr]
+                    else:
+                        header_grp.create_dataset(key, data=arr)
+                elif isinstance(val, dict):
+                    subgrp = header_grp.create_group(key)
+                    for sk, sv in val.items():
+                        try:
+                            subgrp.attrs[sk] = sv
+                        except TypeError:
+                            pass  # Skip complex/unserializable types
+        
+        print(f"Data and header saved to {output_path}")
+        
+        
+    def read_HDF5_file(file_path):
+        """Read data and header from a Bigfoot HDF5 file.
+        
+        Args:
+            file_path (str): Path to the .h5 file
+        
+        Returns:
+            data (dict): Nested dictionary of numerical datasets
+            header (dict): Metadata dictionary
+        """
+        data = {}
+        header = {}
+        
+        with h5py.File(file_path, 'r') as hdf:
+            # Load data
+            data_group = hdf['data']
+            for key in data_group:
+                item = data_group[key]
+                if isinstance(item, h5py.Dataset):
+                    data[key] = item[()]
+                elif isinstance(item, h5py.Group):
+                    data[key] = {}
+                    for subkey in item:
+                        data[key][subkey] = item[subkey][()]
+        
+            # Load header
+            header_group = hdf['header']
+            for key in header_group.attrs:
+                header[key] = header_group.attrs[key]
+        
+            for key in header_group:
+                item = header_group[key]
+                if isinstance(item, h5py.Dataset):
+                    header[key] = item[()]
+                elif isinstance(item, h5py.Group):
+                    header[key] = {}
+                    for subkey in item.attrs:
+                        header[key][subkey] = item.attrs[subkey]
+                    for subkey in item:
+                        header[key][subkey] = item[subkey][()]
+        
+        return data, header
+        
+                    
+                    
+class Bigfoot_helper_functions: 
+    
+    def parse_mdcs_header_to_dict(filepath):
+        """Parses all content of the header file.
+        
+        Args:
+            file_path (str): Path to the header.txt file
+        
+        Returns:
+            header (dict): Metadata dictionary
+        """
+        with open(filepath, 'r') as f:
+            lines = f.readlines()
+
+        result = {
+            "headers": [],
+            "emission_energy": [],
+            "stepped_axis_energy": [],
+            "population_scan_steps": [],
+            "value": None,
+            "scan_params": {},
+            "scan_notes": []
+        }
+
+        # Step 1: Extract headers
+        result["headers"] = lines[0].strip().replace("Rows:", "").split("\t")
+
+        # Step 2: Read data sections
+        mode = 1
+        for idx, line in enumerate(lines[1:], start=1):
+            #print(line)
+            stripped = line.strip()
+            if not stripped:
+                continue
+
+            if mode == 1:
+                # Emission and stepped axis energy (same block)
+                if stripped.startswith('-'):  # start of population scan steps
+                    result["stepped_axis_energy"].extend(map(float, stripped.split()))
+                    mode =2
+                else:
+                    result["emission_energy"].extend(map(float, stripped.split()))
+
+            if mode == 2:
+                # Population scan steps
+                if stripped.startswith("Scan type") or '\t' not in stripped:
+                    try:
+                        result["population_scan_steps"].extend(map(float, stripped.split()))
+                    except ValueError:
+                        # Possibly the single value
+                        try:
+                            result["value"] = float(stripped)
+                        except ValueError:
+                            pass
+                        mode = 3
+                else:
+                    mode = 3
+
+            if mode == 3:
+                # Scan parameters
+                if stripped.startswith("Scan type"):
+                    keys = stripped.split("\t")
+                    values = lines[idx + 1].strip().split("\t")
+                    result["scan_params"] = dict(zip(keys, values))
+                    mode = 4
+
+            if mode == 4:
+                # Scan notes
+                if stripped.startswith("Scan Notes:"):
+                    mode = 5
+
+            if mode == 5:
+                result["scan_notes"].append(stripped)
+
+        return result
+    
+
