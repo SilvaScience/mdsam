@@ -18,8 +18,14 @@ FilesPath = '/Users/simondaneau/Desktop/'
 MeasurementDataFileName = 'fgl530-fp-test_TA_0.dat'
 MeasurementStatisticsFileName = 'fgl530-fp-test_TA_0_stats.dat'
 AveragedOutputFileName = 'fgl530-fp-test_TA_0_matrix.dat'
-SampleName = 'CuGeO3'
-Temperature = 5.0
+SampleName = 'fgl530'
+
+# Optional: add any custom metadata as key-value pairs
+extra_metadata = {
+    "User": "Simon Daneau",
+    "Comment": "Test scan at low temperature with fine alignment",
+    "PumpPower": "50uW",
+    "Temperature": "5K"}
 
 # Import required modules from mdsam
 from mdsam.TA_V2 import TransientAbsorption, HDF5Helper
@@ -31,14 +37,13 @@ TransientAbsorption.transform_to_HDF5(
     MeasurementStatisticsFileName,
     AveragedOutputFileName,
     SampleName,
-    Temperature
-)
+    extra_metadata)
 
 # Load the data from an HDF5 file (with a file selection dialog)
 Data = HDF5Helper.load_from_hdf5_prompt()
 
 # Plot the averaged signal (and save to PNG if desired)
-TransientAbsorption.plot_averaged(Data, save_to_file=True)
+TransientAbsorption.plot_averaged(Data, True)
 ```
 
 ## Notes
