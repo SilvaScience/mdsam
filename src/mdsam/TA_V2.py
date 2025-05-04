@@ -52,7 +52,6 @@ class TransientAbsorption:
                 "ChopperActualPhaseError": np.zeros((), dtype=np.float32),
                 "ChopperClockSource": np.zeros((), dtype=np.str_),
                 "ChopperLocked": np.zeros((), dtype=np.str_),
-                "CryostatTemperature": np.zeros((), dtype=np.float32),
                 "DetectorMotorizedVNDFTransmittance": np.zeros((), dtype=np.float32),
                 "GeneralInformations": np.zeros((), dtype=np.str_),
                 "GratingBlazeWavelength": np.zeros((), dtype=np.int32),
@@ -70,7 +69,7 @@ class TransientAbsorption:
                 "SampleName": np.zeros((), dtype=np.str_),
                 "TargetFrequency": np.zeros((), dtype=np.int32),}}
 
-    def transform_to_HDF5(FilesPath, MeasurementDataFileName, MeasurementStatisticsFileName, AveragedOutputFileName, SampleName, Temperature):
+    def transform_to_HDF5(FilesPath, MeasurementDataFileName, MeasurementStatisticsFileName, AveragedOutputFileName, SampleName, extra_metadata=None):
         
         # --- Read data files ---
         def read_lines_from_file(path):
@@ -174,7 +173,6 @@ class TransientAbsorption:
         # Get the data from Measurement Statistics
         Data["Statistics"]["GeneralInformations"] = MeasurementStatisticsLines[0][:-1]
         Data["Statistics"]["SampleName"] = SampleName
-        Data["Statistics"]["CryostatTemperature"] = Temperature
         Data["Statistics"]["MeasurementStarted"] = MeasurementStatisticsLines[1][21:-1]
         Data["Statistics"]["LaserTriggerClockDivider"] = MeasurementStatisticsLines[2][29:-1]
         Data["Statistics"]["ChopperLocked"] = MeasurementStatisticsLines[3][19:-1]
@@ -197,6 +195,11 @@ class TransientAbsorption:
         Data["Statistics"]["SampleMoverActive"] = MeasurementStatisticsLines[16][21:-1]
         Data["Statistics"]["MeasurementFinished"] = MeasurementStatisticsLines[-1][22:-1]
 
+        # Inject extra metadata if provided
+        if extra_metadata:
+            for key, value in extra_metadata.items():
+                Data["Statistics"][key] = value
+
         # Generate HDF5 file name using f-string for better readability
         Hour = Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
         HDF5FileName = f"{SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
@@ -217,7 +220,6 @@ class TransientAbsorption:
         AveragedDelay = Data['AveragedDelay']
         AveragedSignal = Data['AveragedSignal']
         SampleName = Data['Statistics']['SampleName']
-        Temperature = Data['Statistics']['CryostatTemperature']
 
         # Create the plot
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -226,7 +228,7 @@ class TransientAbsorption:
         cbar = fig.colorbar(pcolor, ax=ax)
         cbar.set_label('Differential absorption', rotation=90)
 
-        ax.set_title(f"Transient absorption: {SampleName}, T = {Temperature} K", fontweight="bold")
+        ax.set_title(f"Transient absorption: {SampleName}", fontweight="bold")
         ax.set_xlabel("Wavelength [nm]")
         ax.set_ylabel("Delay [ps]")
 
