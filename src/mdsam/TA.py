@@ -69,12 +69,16 @@ class TransientAbsorption:
                 "SampleName": np.zeros((), dtype=np.str_),
                 "TargetFrequency": np.zeros((), dtype=np.int32),}}
 
-    def transform_to_HDF5(FilesPath, MeasurementDataFileName, MeasurementStatisticsFileName, AveragedOutputFileName, SampleName, extra_metadata=None):
+    def transform_to_HDF5(FilesPath, MeasurementDataFileName, SampleName, extra_metadata=None):
         
         # --- Read data files ---
         def read_lines_from_file(path):
             with open(path) as f:
                 return f.readlines()
+            
+        BaseName = os.path.splitext(MeasurementDataFileName)[0] # Removes .dat
+        MeasurementStatisticsFileName = f'{BaseName}_stats.dat'
+        AveragedOutputFileName = f'{BaseName}_matrix.dat'
 
         MeasurementDataLines = read_lines_from_file(os.path.join(FilesPath, MeasurementDataFileName))
         MeasurementStatisticsLines = read_lines_from_file(os.path.join(FilesPath, MeasurementStatisticsFileName))
@@ -205,7 +209,8 @@ class TransientAbsorption:
         HDF5FileName = f"{SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
 
         # Create HDF5
-        HDF5Helper.save_to_hdf5_with_prompt(Data, HDF5FileName)
+        #HDF5Helper.save_to_hdf5_with_prompt(Data, HDF5FileName)
+        HDF5Helper.save_to_hdf5(Data, FilesPath, HDF5FileName)
 
     def plot_averaged(Data, save_png=False):
         """
@@ -215,6 +220,7 @@ class TransientAbsorption:
         - Data: Dictionary containing the measurement and statistics data
         - save_png (bool): If True, open dialog to save plot as PNG
         """
+        
         # Extracting necessary data
         Wavelength = Data['Wavelength']
         AveragedDelay = Data['AveragedDelay']
@@ -267,6 +273,7 @@ class HDF5Helper:
         - data (dict): The data to save
         - default_filename (str): Suggested default file name
         """
+       
         # Initialize and hide the Tkinter root window
         root = tk.Tk()
         root.withdraw()
@@ -293,8 +300,39 @@ class HDF5Helper:
         print(f"Data saved to {filepath}")
 
     @staticmethod
+    def save_to_hdf5(data, filepath, filename):
+        """
+        Save the provided data to an HDF5 file.
+
+        Parameters:
+        - data (dict): The data to save.
+        - filepath (str): Directory where the file will be saved.
+        - filename (str): File name (with or without extension).
+        """
+
+        # Ensure the directory exists
+        os.makedirs(filepath, exist_ok=True)
+
+        # Add default extension if missing
+        base, ext = os.path.splitext(filename)
+        if ext == '':
+            ext = '.h5'
+        full_path = os.path.join(filepath, base + ext)
+
+        # If file exists, remove it
+        if os.path.exists(full_path):
+            os.remove(full_path)
+
+        # Write the data to the HDF5 file
+        with h5py.File(full_path, 'w') as h5f:
+            HDF5Helper._recursively_save(h5f, '', data)
+
+        print(f"Data saved to {full_path}")
+
+    @staticmethod
     def _recursively_save(h5file, path, dic):
         """Recursively save a nested dictionary into an HDF5 file."""
+        
         for key, item in dic.items():
             # Build the dataset path within the HDF5 structure
             key_path = f"{path}/{key}" if path else key
@@ -312,30 +350,57 @@ class HDF5Helper:
     @staticmethod
     def load_from_hdf5_prompt():
         """Open file dialog to load HDF5 data and return it as a nested dictionary."""
+        
         # Initialize and hide the Tkinter root window
         root = tk.Tk()
         root.withdraw()
 
         # Ask user to select an HDF5 file
-        filepath = filedialog.askopenfilename(
+        full_path = filedialog.askopenfilename(
             title="Choose HDF5 file to open",
             filetypes=[("HDF5 files", "*.hdf5 *.h5"), ("All files", "*.*")])
-        if not filepath:
+        if not full_path:
             print("Load cancelled.")
+            return None
+        
+        # Split into directory and filename
+        filepath, filename = os.path.split(full_path)
+
+        # Load and return the data
+        return HDF5Helper.load_from_hdf5(filepath, filename)
+
+    @staticmethod
+    def load_from_hdf5(filepath, filename):
+        """
+        Load HDF5 data from the specified directory and filename, and return it as a nested dictionary.
+
+        Parameters:
+        - filepath (str): Directory where the file is located.
+        - filename (str): Name of the HDF5 file (with or without extension).
+
+        Returns:
+        - dict: Nested dictionary of loaded data, or None if the file doesn't exist.
+        """
+
+        # Add default extension if missing
+        base, ext = os.path.splitext(filename)
+        if ext == '':
+            ext = '.h5'
+        full_path = os.path.join(filepath, base + ext)
+
+        # Check file existence
+        if not os.path.exists(full_path):
+            print(f"File not found: {full_path}")
             return None
 
         # Load and return the data
-        return HDF5Helper.load_from_hdf5(filepath)
-
-    @staticmethod
-    def load_from_hdf5(filename):
-        """Load a nested dictionary from an HDF5 file."""
-        with h5py.File(filename, 'r') as h5f:
+        with h5py.File(full_path, 'r') as h5f:
             return HDF5Helper._recursively_load(h5f)
 
     @staticmethod
     def _recursively_load(h5group):
         """Recursively load data from an HDF5 group into a nested dictionary."""
+        
         result = {}
         for key, item in h5group.items():
             if isinstance(item, h5py.Group):

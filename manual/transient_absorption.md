@@ -16,8 +16,8 @@ Make sure the following data files exist in your specified directory (`FilesPath
 # Define the file paths and sample parameters
 FilesPath = '/Users/simondaneau/Desktop/'
 MeasurementDataFileName = 'fgl530-fp-test_TA_0.dat'
-MeasurementStatisticsFileName = 'fgl530-fp-test_TA_0_stats.dat'
-AveragedOutputFileName = 'fgl530-fp-test_TA_0_matrix.dat'
+# MeasurementStatisticsFileName = 'fgl530-fp-test_TA_0_stats.dat'
+# AveragedOutputFileName = 'fgl530-fp-test_TA_0_matrix.dat'
 SampleName = 'fgl530'
 
 # Optional: add any custom metadata as key-value pairs
