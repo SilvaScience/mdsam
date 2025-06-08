@@ -24,8 +24,8 @@ from BF import Bigfoot as bf
 cwd = os.getcwd() # get current working directory
 project_folder = 'src'
 project_data_idx = cwd.find(project_folder)
-data_folder = cwd[:project_data_idx+len(project_folder) + 1] + 'Data\\Bigfoot_GaAs\\Run020' +  '\\'
-output_path = cwd[:project_data_idx+len(project_folder) + 1] + 'Data\\Bigfoot_GaAs\\test_file.h5'
+data_folder = cwd[:project_data_idx+len(project_folder) + 1] + 'example_data\\Bigfoot_GaAs\\Run020' +  '\\'
+output_path = cwd[:project_data_idx+len(project_folder) + 1] + 'example_data\\Bigfoot_GaAs\\test_file.h5'
 
 bf.transform_to_HDF5(data_folder,output_path)
 data,header = bf.read_HDF5_file(output_path)
@@ -85,5 +85,5 @@ for i in range(3):
     plts[i].tick_params(axis='both', which='major', length=6, width=1, direction='in', bottom=True, top=True, left=True, right=True)
     plts[i].tick_params(axis='both', which='minor', length=3, width=1, direction='in', bottom=True, top=True, left=True, right=True)
 for i in range(2): plts[i+1].yaxis.set_ticklabels([])
-
+f.annotate('Test')
 plt.show()
