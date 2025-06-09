@@ -25,7 +25,7 @@ polyFitRange = list()
 diagMethod = int(0)  # don't change, only implemented method
 
 
-def plotting_data()
+def plotting_data():
 # FREQUENCY AXES #
 # calculate the probe and pump indices
 probeIdx = np.arange(nPixels)
