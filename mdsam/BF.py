@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import h5py                     
 
 from pathlib import Path
-from helper_functions import utils as ut
+import helper_functions  as ut
 
 class Bigfoot:
                        
@@ -27,6 +27,8 @@ class Bigfoot:
         #### load data ####
         # find data files in data folder
         files_raw = [file for file in os.listdir(data_folder) if file.find('.tsv')!= -1]
+        if files_raw == []:
+            print('WARNING: No files found in data folder!')
         header_file = [file for file in os.listdir(data_folder) if file.find('Header.txt')!= -1][0]
         subfolder = [file for file in os.listdir(data_folder) if file.find('_Averages')!= -1][0]
         subfolder_files = os.listdir(data_folder + subfolder)
