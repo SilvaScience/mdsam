@@ -11,18 +11,26 @@ import matplotlib.pyplot as plt
 import h5py                     
 
 from pathlib import Path
-import helper_functions  as ut
+from mdsam.helper_functions import HelperFunctions  as ut
 
 class Bigfoot:
                        
-    def transform_to_HDF5(data_folder,output_path):
+    def transform_to_HDF5(data_folder):
         """ Transform Bigfoot data to .hdf5 file 
         
         Args:
-            data_folder (str): full path to the data as saved from Bigfoot software
+            data_folder (str): relative or full path to the data as saved from Bigfoot software
         
         Returns: .hdf5 file 
         """
+        # check if provided data_path is absolute
+        p = Path(data_folder)
+        if not p.is_absolute():
+            cwd = os.getcwd()
+            data_folder = cwd + data_folder
+        
+        # append to data_folder to make access files insider folder 
+        data_folder = data_folder +  '\\'
         
         #### load data ####
         # find data files in data folder
@@ -32,9 +40,17 @@ class Bigfoot:
         header_file = [file for file in os.listdir(data_folder) if file.find('Header.txt')!= -1][0]
         subfolder = [file for file in os.listdir(data_folder) if file.find('_Averages')!= -1][0]
         subfolder_files = os.listdir(data_folder + subfolder)
+        
+        #prepare output filename
+        num_run = header_file[-14:-11]
+        sample_name = header_file[:-14]
+        date = Path(data_folder).parent.name
+        output_filenname = sample_name + '_' + date + '_' + num_run + '_Bigfoot.h5'
+        output_path = str(Path(data_folder).parent) + '\\' + output_filenname
 
         # process header data in separate function
         header = Bigfoot_helper_functions.parse_mdcs_header_to_dict(data_folder + header_file)
+        header['file_id'] = output_filenname[:-3]
 
         # order files in data dictionary 
         filenames = ['2DSpec_amp','2DSpec_phase','Linear_amp','TimeSpec_amp','TimeSpec_phase']
@@ -112,6 +128,7 @@ class Bigfoot:
                             pass  # Skip complex/unserializable types
         
         print(f"Data and header saved to {output_path}")
+        return output_path
         
         
     def read_HDF5_file(file_path):
