@@ -15,8 +15,14 @@ class BFPlots:
     def plot_Reph_Re_Im_Abs(data,header,plot_range):
         
         #get data from data dict
-        em_axis = data['em_axis']
-        ex_axis = data['ex_axis']
+        try: 
+            em_axis = data['em_axis']
+            ex_axis = data['ex_axis']
+        except KeyError as e:
+            raise KeyError(f"Axis not found in the highest h5 hieracrcy. \
+                           Check for 3D or 2D data. Missing expected key: {e}") 
+            
+            
     
         mat = data['2Dabs']
         matreal = data['2Dreal']
