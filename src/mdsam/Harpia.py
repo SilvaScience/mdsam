@@ -15,38 +15,38 @@ from pathlib import Path
 class TransientAbsorption:
 
     @staticmethod
-    def create_database_dict(NbDelay, NbScan, NbWavelength):
+    def create_database_dict(self):
         return {
-            "NumberDelay": NbDelay,
-            "NumberScan": NbScan,
-            "NumberWavelength": NbWavelength,
-            "AveragedDelay": np.zeros((NbDelay,), dtype=np.float32),
-            "AveragedSignal": np.zeros((NbDelay, NbWavelength), dtype=np.float32),
-            "Wavelength": np.zeros((NbWavelength,), dtype=np.float32),
+            "NumberDelay": self.NbDelay,
+            "NumberScan": self.NbScan,
+            "NumberWavelength": self.NbWavelength,
+            "AveragedDelay": np.zeros((self.NbDelay,), dtype=np.float32),
+            "AveragedSignal": np.zeros((self.NbDelay, self.NbWavelength), dtype=np.float32),
+            "Wavelength": np.zeros((self.NbWavelength,), dtype=np.float32),
             "Background": {
-                "DelayTA": np.zeros((NbScan,), dtype=np.float32),
-                "DelayTB": np.zeros((NbScan,), dtype=np.float32),
+                "DelayTA": np.zeros((self.NbScan,), dtype=np.float32),
+                "DelayTB": np.zeros((self.NbScan,), dtype=np.float32),
                 "GeneralInformations": np.zeros((), dtype=np.str_),
-                "NotPumpedSignalCount": np.zeros((NbScan,), dtype=np.int32),
-                "NotPumpedSignalDeviation": np.zeros((NbScan,), dtype=np.float32),
-                "NotPumpedSpectra": np.zeros((NbScan, NbWavelength), dtype=np.float32),
-                "PumpPower": np.zeros((NbScan,), dtype=np.float32),
-                "PumpedSignalCount": np.zeros((NbScan,), dtype=np.int32),
-                "PumpedSignalDeviation": np.zeros((NbScan,), dtype=np.float32),
-                "PumpedSpectra": np.zeros((NbScan, NbWavelength), dtype=np.float32),
-                "TotalSignalCount": np.zeros((NbScan,), dtype=np.int32),},
+                "NotPumpedSignalCount": np.zeros((self.NbScan,), dtype=np.int32),
+                "NotPumpedSignalDeviation": np.zeros((self.NbScan,), dtype=np.float32),
+                "NotPumpedSpectra": np.zeros((self.NbScan, self.NbWavelength), dtype=np.float32),
+                "PumpPower": np.zeros((self.NbScan,), dtype=np.float32),
+                "PumpedSignalCount": np.zeros((self.NbScan,), dtype=np.int32),
+                "PumpedSignalDeviation": np.zeros((self.NbScan,), dtype=np.float32),
+                "PumpedSpectra": np.zeros((self.NbScan, self.NbWavelength), dtype=np.float32),
+                "TotalSignalCount": np.zeros((self.NbScan,), dtype=np.int32),},
             "Measurement": {
-                "DelayTA": np.zeros((NbScan, NbDelay), dtype=np.float32),
-                "DelayTB": np.zeros((NbScan, NbDelay), dtype=np.float32),
+                "DelayTA": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
+                "DelayTB": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
                 "GeneralInformations": np.zeros((), dtype=np.str_),
-                "NotPumpedSignalCount": np.zeros((NbScan, NbDelay), dtype=np.int32),
-                "NotPumpedSignalDeviation": np.zeros((NbScan, NbDelay), dtype=np.float32),
-                "NotPumpedSpectra": np.zeros((NbScan, NbDelay, NbWavelength), dtype=np.float32),
-                "PumpPower": np.zeros((NbScan, NbDelay), dtype=np.float32),
-                "PumpedSignalCount": np.zeros((NbScan, NbDelay), dtype=np.int32),
-                "PumpedSignalDeviation": np.zeros((NbScan, NbDelay), dtype=np.float32),
-                "PumpedSpectra": np.zeros((NbScan, NbDelay, NbWavelength), dtype=np.float32),
-                "TotalSignalCount": np.zeros((NbScan, NbDelay), dtype=np.int32),},
+                "NotPumpedSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),
+                "NotPumpedSignalDeviation": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
+                "NotPumpedSpectra": np.zeros((self.NbScan, self.NbDelay, self.NbWavelength), dtype=np.float32),
+                "PumpPower": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
+                "PumpedSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),
+                "PumpedSignalDeviation": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
+                "PumpedSpectra": np.zeros((self.NbScan, self.NbDelay, self.NbWavelength), dtype=np.float32),
+                "TotalSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),},
             "Statistics": {
                 "ChopperActualFrequency": np.zeros((), dtype=np.float32),
                 "ChopperActualPhaseError": np.zeros((), dtype=np.float32),
@@ -68,42 +68,52 @@ class TransientAbsorption:
                 "SampleMoverActive": np.zeros((), dtype=np.str_),
                 "SampleName": np.zeros((), dtype=np.str_),
                 "TargetFrequency": np.zeros((), dtype=np.int32),}}
+    
+    def __init__(self, FilesPath, MeasurementDataFileName, SampleName, extra_metadata=None):
 
-    def transform_to_HDF5(FilesPath, MeasurementDataFileName, SampleName, extra_metadata=None):
-        
+        self.Data = {}
+        self.FilesPath = FilesPath
+        self.BaseName = MeasurementDataFileName
+        self.SampleName = SampleName
+        self.extra_metadata = extra_metadata
+        self.transform_to_HDF5()
+        self.plot_averaged()
+    
+    def transform_to_HDF5(self):
+
         # --- Read data files ---
         def read_lines_from_file(path):
             with open(path) as f:
                 return f.readlines()
             
-        BaseName = os.path.splitext(MeasurementDataFileName)[0] # Removes .dat
+        BaseName = os.path.splitext(self.BaseName)[0] # Removes .dat
         MeasurementStatisticsFileName = f'{BaseName}_stats.dat'
         AveragedOutputFileName = f'{BaseName}_matrix.dat'
 
-        MeasurementDataLines = read_lines_from_file(os.path.join(FilesPath, MeasurementDataFileName))
-        MeasurementStatisticsLines = read_lines_from_file(os.path.join(FilesPath, MeasurementStatisticsFileName))
-        AveragedOutputLines = read_lines_from_file(os.path.join(FilesPath, AveragedOutputFileName))
+        MeasurementDataLines = read_lines_from_file(os.path.join(self.FilesPath, self.BaseName))
+        MeasurementStatisticsLines = read_lines_from_file(os.path.join(self.FilesPath, MeasurementStatisticsFileName))
+        AveragedOutputLines = read_lines_from_file(os.path.join(self.FilesPath, AveragedOutputFileName))
 
         # --- Initialize storage parameters ---
-        NbDelay = len(AveragedOutputLines) - 2 - 1  # Number of delay points (skip 2 header lines)
-        NbScan = int(MeasurementStatisticsLines[7][16:-1]) - 1  # Number of scans (0-indexed)
+        self.NbDelay = len(AveragedOutputLines) - 2 - 1  # Number of delay points (skip 2 header lines)
+        self.NbScan = int(MeasurementStatisticsLines[7][16:-1]) - 1  # Number of scans (0-indexed)
         WavelengthStr = MeasurementStatisticsLines[19][12:-1].split('\t')
-        NbWavelength = len(WavelengthStr) # Number of wavelength channels
+        self.NbWavelength = len(WavelengthStr) # Number of wavelength channels
 
         # --- Create data structure ---
-        Data = TransientAbsorption.create_database_dict(NbDelay, NbScan, NbWavelength)
-        Data["Wavelength"] = [np.float32(w) for w in WavelengthStr]  # Store wavelength values
+        self.Data = self.create_database_dict(self)
+        self.Data["Wavelength"] = [np.float32(w) for w in WavelengthStr]  # Store wavelength values
 
         # --- Parse averaged output ---
-        for delay_index in range(NbDelay):
+        for delay_index in range(self.NbDelay):
             LineStr = re.split(r'\s+', AveragedOutputLines[delay_index + 3].strip())  # Tokenize line
-            Data["AveragedDelay"][delay_index] = LineStr[0]  # Delay value
-            Data["AveragedSignal"][delay_index] = [np.float32(value) for value in LineStr[1:]]  # Signal values as float32
+            self.Data["AveragedDelay"][delay_index] = LineStr[0]  # Delay value
+            self.Data["AveragedSignal"][delay_index] = [np.float32(value) for value in LineStr[1:]]  # Signal values as float32
 
         # --- Parse measurement data file ---
         # Extract general metadata for background and measurement
-        Data["Background"]["GeneralInformations"] = MeasurementStatisticsLines[17][12:-1]
-        Data["Measurement"]["GeneralInformations"] = MeasurementStatisticsLines[18][13:-1]
+        self.Data["Background"]["GeneralInformations"] = MeasurementStatisticsLines[17][12:-1]
+        self.Data["Measurement"]["GeneralInformations"] = MeasurementStatisticsLines[18][13:-1]
 
         delay_index = 0  # Keeps track of the delay step for measurement entries
 
@@ -119,7 +129,7 @@ class TransientAbsorption:
                 line4 = MeasurementStatisticsLines[i + 4][:-1].split(', ')
 
                 # Indexing shortcut
-                data = Data[base]
+                data = self.Data[base]
 
                 # Parse shared fields
                 if is_background:
@@ -147,7 +157,7 @@ class TransientAbsorption:
             elif measurement_type == "Measurement":
                 store_measurement_data("Measurement", is_background=False)
                 delay_index += 1
-                if delay_index == NbDelay:
+                if delay_index == self.NbDelay:
                     delay_index = 0  # Reset delay index after one full cycle
 
         # --- Parse measurement data lines (spectra) ---
@@ -164,55 +174,55 @@ class TransientAbsorption:
                 return [np.float32(value) for value in line_str.split('\t')]
 
             if measurement_type == "Background":
-                Data["Background"]["PumpedSpectra"][scan_index][:] = parse_spectrum(MeasurementDataLines[i + 2])
-                Data["Background"]["NotPumpedSpectra"][scan_index][:] = parse_spectrum(MeasurementDataLines[i + 4])
+                self.Data["Background"]["PumpedSpectra"][scan_index][:] = parse_spectrum(MeasurementDataLines[i + 2])
+                self.Data["Background"]["NotPumpedSpectra"][scan_index][:] = parse_spectrum(MeasurementDataLines[i + 4])
 
             elif measurement_type == "Measurement":
-                Data["Measurement"]["PumpedSpectra"][scan_index][delay_index][:] = parse_spectrum(MeasurementDataLines[i + 2])
-                Data["Measurement"]["NotPumpedSpectra"][scan_index][delay_index][:] = parse_spectrum(MeasurementDataLines[i + 4])
+                self.Data["Measurement"]["PumpedSpectra"][scan_index][delay_index][:] = parse_spectrum(MeasurementDataLines[i + 2])
+                self.Data["Measurement"]["NotPumpedSpectra"][scan_index][delay_index][:] = parse_spectrum(MeasurementDataLines[i + 4])
                 delay_index += 1
-                if delay_index == NbDelay:
+                if delay_index == self.NbDelay:
                     delay_index = 0  # Reset after completing all delay points
 
         # Get the data from Measurement Statistics
-        Data["Statistics"]["GeneralInformations"] = MeasurementStatisticsLines[0][:-1]
-        Data["Statistics"]["SampleName"] = SampleName
-        Data["Statistics"]["MeasurementStarted"] = MeasurementStatisticsLines[1][21:-1]
-        Data["Statistics"]["LaserTriggerClockDivider"] = MeasurementStatisticsLines[2][29:-1]
-        Data["Statistics"]["ChopperLocked"] = MeasurementStatisticsLines[3][19:-1]
-        Data["Statistics"]["GratingBlazeWavelength"] = MeasurementStatisticsLines[4][30:-1]
-        Data["Statistics"]["GratingGrooves"] = MeasurementStatisticsLines[5][23:-1]
-        Data["Statistics"]["NumberSpectraBackground"] = MeasurementStatisticsLines[6][49:-1]
-        Data["Statistics"]["NumberRun"] = MeasurementStatisticsLines[7][16:-1]
-        Data["Statistics"]["PumpLaserFrequency"] = MeasurementStatisticsLines[8][22:-4]
-        Data["Statistics"]["PumpMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[9][35:-1]
-        Data["Statistics"]["ProbeMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[10][36:-1]
-        Data["Statistics"]["DetectorMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[11][39:-1]
-        Data["Statistics"]["HarpiaMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[12][40:-1]
+        self.Data["Statistics"]["GeneralInformations"] = MeasurementStatisticsLines[0][:-1]
+        self.Data["Statistics"]["SampleName"] = self.SampleName
+        self.Data["Statistics"]["MeasurementStarted"] = MeasurementStatisticsLines[1][21:-1]
+        self.Data["Statistics"]["LaserTriggerClockDivider"] = MeasurementStatisticsLines[2][29:-1]
+        self.Data["Statistics"]["ChopperLocked"] = MeasurementStatisticsLines[3][19:-1]
+        self.Data["Statistics"]["GratingBlazeWavelength"] = MeasurementStatisticsLines[4][30:-1]
+        self.Data["Statistics"]["GratingGrooves"] = MeasurementStatisticsLines[5][23:-1]
+        self.Data["Statistics"]["NumberSpectraBackground"] = MeasurementStatisticsLines[6][49:-1]
+        self.Data["Statistics"]["NumberRun"] = MeasurementStatisticsLines[7][16:-1]
+        self.Data["Statistics"]["PumpLaserFrequency"] = MeasurementStatisticsLines[8][22:-4]
+        self.Data["Statistics"]["PumpMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[9][35:-1]
+        self.Data["Statistics"]["ProbeMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[10][36:-1]
+        self.Data["Statistics"]["DetectorMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[11][39:-1]
+        self.Data["Statistics"]["HarpiaMotorizedVNDFTransmittance"] = MeasurementStatisticsLines[12][40:-1]
 
         LineStr = MeasurementStatisticsLines[13][:-1].split(', ')
-        Data["Statistics"]["ChopperClockSource"] = LineStr[0][22:]
-        Data["Statistics"]["TargetFrequency"] = LineStr[1][17:-3]
+        self.Data["Statistics"]["ChopperClockSource"] = LineStr[0][22:]
+        self.Data["Statistics"]["TargetFrequency"] = LineStr[1][17:-3]
 
-        Data["Statistics"]["ChopperActualFrequency"] = MeasurementStatisticsLines[14][26:-4]
-        Data["Statistics"]["ChopperActualPhaseError"] = MeasurementStatisticsLines[15][28:-5]
-        Data["Statistics"]["SampleMoverActive"] = MeasurementStatisticsLines[16][21:-1]
-        Data["Statistics"]["MeasurementFinished"] = MeasurementStatisticsLines[-1][22:-1]
+        self.Data["Statistics"]["ChopperActualFrequency"] = MeasurementStatisticsLines[14][26:-4]
+        self.Data["Statistics"]["ChopperActualPhaseError"] = MeasurementStatisticsLines[15][28:-5]
+        self.Data["Statistics"]["SampleMoverActive"] = MeasurementStatisticsLines[16][21:-1]
+        self.Data["Statistics"]["MeasurementFinished"] = MeasurementStatisticsLines[-1][22:-1]
 
         # Inject extra metadata if provided
-        if extra_metadata:
-            for key, value in extra_metadata.items():
-                Data["Statistics"][key] = value
+        if self.extra_metadata:
+            for key, value in self.extra_metadata.items():
+                self.Data["Statistics"][key] = value
 
         # Generate HDF5 file name using f-string for better readability
-        Hour = Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
-        HDF5FileName = f"{SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
+        Hour = self.Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
+        HDF5FileName = f"{self.SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
 
         # Create HDF5
         #HDF5Helper.save_to_hdf5_with_prompt(Data, HDF5FileName)
-        HDF5Helper.save_to_hdf5(Data, FilesPath, HDF5FileName)
+        HDF5Helper.save_to_hdf5(self.Data, self.FilesPath, HDF5FileName)
 
-    def plot_averaged(Data, save_png=False):
+    def plot_averaged(self, save_png=False):
         """
         Plots the 2D map of averaged signal with respect to wavelength and delay.
 
@@ -222,10 +232,10 @@ class TransientAbsorption:
         """
         
         # Extracting necessary data
-        Wavelength = Data['Wavelength']
-        AveragedDelay = Data['AveragedDelay']
-        AveragedSignal = Data['AveragedSignal']
-        SampleName = Data['Statistics']['SampleName']
+        Wavelength = self.Data['Wavelength']
+        AveragedDelay = self.Data['AveragedDelay']
+        AveragedSignal = self.Data['AveragedSignal']
+        SampleName = self.Data['Statistics']['SampleName']
 
         # Create the plot
         fig, ax = plt.subplots(figsize=(10, 6))

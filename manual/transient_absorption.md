@@ -28,25 +28,13 @@ extra_metadata = {
     "Temperature": "5K"}
 
 # Import required modules from mdsam
-from mdsam.TA_V2 import TransientAbsorption, HDF5Helper
+from mdsam import Harpia
 
-# Convert the data into an HDF5 file
-TransientAbsorption.transform_to_HDF5(
+# Convert the data into an HDF5 file, i.e. run the __init__ function and plot.
+TAdata = Harpia.TransientAbsorption(
     FilesPath,
     MeasurementDataFileName,
-    MeasurementStatisticsFileName,
-    AveragedOutputFileName,
     SampleName,
     extra_metadata)
-
-# Load the data from an HDF5 file (with a file selection dialog)
-Data = HDF5Helper.load_from_hdf5_prompt()
-
-# Plot the averaged signal (and save to PNG if desired)
-TransientAbsorption.plot_averaged(Data, True)
-```
-
-## Notes
-
-- When running this script, a dialog will appear to let you select the HDF5 file to load.
-- The final plot will display the 2D transient absorption map and optionally save it to a PNG file.
+    
+##
