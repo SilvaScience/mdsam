@@ -36,3 +36,5 @@ TA = Harpia.TransientAbsorption(
     MeasurementDataFileName,
     SampleName,
     extra_metadata)
+TA.transform_to_HDF5()
+TA.plot_averaged()

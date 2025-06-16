@@ -76,8 +76,6 @@ class TransientAbsorption:
         self.BaseName = MeasurementDataFileName
         self.SampleName = SampleName
         self.extra_metadata = extra_metadata
-        self.transform_to_HDF5()
-        self.plot_averaged()
     
     def transform_to_HDF5(self):
 
