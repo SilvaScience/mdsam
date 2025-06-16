@@ -31,10 +31,8 @@ extra_metadata = {
 from mdsam import Harpia
 
 # Convert the data into an HDF5 file, i.e. run the __init__ function and plot.
-TAdata = Harpia.TransientAbsorption(
+TA = Harpia.TransientAbsorption(
     FilesPath,
     MeasurementDataFileName,
     SampleName,
     extra_metadata)
-    
-##
