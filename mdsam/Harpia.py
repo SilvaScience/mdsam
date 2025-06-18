@@ -45,7 +45,7 @@ class TransientAbsorption:
                 "PumpPower": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
                 "PumpedSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),
                 "PumpedSignalDeviation": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
-                "PumpedSpectra": np.zeros((self.NbScan, self.NbDelay, self.NbWavelength), dtype=np.float32),
+                
                 "TotalSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),},
             "Statistics": {
                 "ChopperActualFrequency": np.zeros((), dtype=np.float32),
@@ -76,6 +76,9 @@ class TransientAbsorption:
         self.BaseName = MeasurementDataFileName
         self.SampleName = SampleName
         self.extra_metadata = extra_metadata
+        # Generate HDF5 file name using f-string for better readability
+        Hour = self.Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
+        self.HDF5FileName = f"{self.SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
     
     def transform_to_HDF5(self):
 
@@ -212,13 +215,10 @@ class TransientAbsorption:
             for key, value in self.extra_metadata.items():
                 self.Data["Statistics"][key] = value
 
-        # Generate HDF5 file name using f-string for better readability
-        Hour = self.Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
-        HDF5FileName = f"{self.SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
 
         # Create HDF5
         #HDF5Helper.save_to_hdf5_with_prompt(Data, HDF5FileName)
-        HDF5Helper.save_to_hdf5(self.Data, self.FilesPath, HDF5FileName)
+        HDF5Helper.save_to_hdf5(self.Data, self.FilesPath, self.HDF5FileName)
 
     def plot_averaged(self, save_png=False):
         """
@@ -242,7 +242,7 @@ class TransientAbsorption:
         cbar = fig.colorbar(pcolor, ax=ax)
         cbar.set_label('Differential absorption', rotation=90)
 
-        ax.set_title(f"Transient absorption: {SampleName}", fontweight="bold")
+        ax.set_title(f"Transient absorption: {self.HDF5FileName}", fontweight="bold")
         ax.set_xlabel("Wavelength [nm]")
         ax.set_ylabel("Delay [ps]")
 
