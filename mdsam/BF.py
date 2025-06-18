@@ -38,6 +38,7 @@ class Bigfoot:
         files_raw = [file for file in os.listdir(data_folder) if file.find('.tsv')!= -1]
         if files_raw == []:
             print('WARNING: No files found in data folder!')
+            print(data_folder)
         header_file = [file for file in os.listdir(data_folder) if file.find('Header.txt')!= -1][0]
         subfolder = [file for file in os.listdir(data_folder) if file.find('_Averages')!= -1][0]
         subfolder_files = os.listdir(data_folder + subfolder)
@@ -100,11 +101,18 @@ class Bigfoot:
     
             # find indices for valid range 
             em_range = np.r_[ut.find_idx(em_axis,range_min):ut.find_idx(em_axis,range_max)]
-            ex_range = np.r_[ut.find_idx(ex_axis,-range_max):ut.find_idx(ex_axis,-range_min)] 
-            
+            scan_type = header['scan_params']['Scan type']
+            if scan_type == '1Q-R':
+                ex_range = np.r_[ut.find_idx(ex_axis,-range_max):ut.find_idx(ex_axis,-range_min)]
+            elif scan_type == '1Q-NR':
+                ex_range = np.r_[ut.find_idx(ex_axis,range_min):ut.find_idx(ex_axis,range_max)]
+            else:
+                print('WARNING, data treatment of scan type not worked out yet. Treat as 1Q-R')
+                
             # calculate 2D spec for every T_pop
             for T_pop  in T_pop_array:
                 # crop 2D data to valid range
+                print(data[T_pop]['raw']['2DSpec_amp'])
                 amp_2D_data = data[T_pop]['raw']['2DSpec_amp'][em_range[0]:em_range[-1],ex_range[0]:ex_range[-1]]
                 phase_2D_data = data[T_pop]['raw']['2DSpec_phase'][em_range[0]:em_range[-1],ex_range[0]:ex_range[-1]]
                 
