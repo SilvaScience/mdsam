@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mdsam"
-version = "0.0.2"
+version = "0.0.4"
 authors = [
   { name="Felix Thouin", email="felix.thouin@umontreal.ca" },
   { name="David Otto Tiede", email="david.otto.tiede@umontreal.ca" },
