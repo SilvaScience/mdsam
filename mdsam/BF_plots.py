@@ -13,6 +13,15 @@ from matplotlib.ticker import MaxNLocator
 class BFPlots:
 
     def plot_Reph_Re_Im_Abs(data,header,plot_range):
+        """ Plots 2D rephasing spectra with real, imag and absolute 2D maps. 
+            Axis limits are specified through range. 
+        
+        Args:
+            data (dict): dict with data loaded from a BF .h5 file
+            header (dict): dict with metadata loaded from a BF .h5 file
+            plot range (list): list with two entries for min and max values of axis (in meV)
+            
+        """
         
         #get data from data dict
         try: 

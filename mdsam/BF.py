@@ -19,6 +19,10 @@ class Bigfoot:
     def transform_to_HDF5(data_folder):
         """ Transform Bigfoot data to .hdf5 file 
         
+        Stores all data in a single file with substructures for each scan and step. 
+        Detects whether data is a single delay (2D dataset) or a full scan (3D dataset). 
+        Processes data to directly save abs, real and imag maps of the averaged data. 
+        
         Args:
             data_folder (str): relative or full path to the data as saved from Bigfoot software
         
@@ -120,8 +124,8 @@ class Bigfoot:
                 data[T_pop]['em_axis'] = em_axis[em_range[:-1]]
                 data[T_pop]['ex_axis'] = ex_axis[ex_range[:-1]]
                 data[T_pop]['2Dabs'] = amp_2D_data
-                data[T_pop]['2Dreal'] = amp_2D_data*np.sin(phase_2D_data)
-                data[T_pop]['2Dimag'] = amp_2D_data*np.cos(phase_2D_data)
+                data[T_pop]['2Dreal'] = amp_2D_data*np.cos(phase_2D_data)
+                data[T_pop]['2Dimag'] = amp_2D_data*np.sin(phase_2D_data)
         else:
             data = {}
             data['raw'] = {}
@@ -162,8 +166,8 @@ class Bigfoot:
             data['em_axis'] = em_axis[em_range[:-1]]
             data['ex_axis'] = ex_axis[ex_range[:-1]]
             data['2Dabs'] = amp_2D_data
-            data['2Dreal'] = amp_2D_data*np.sin(phase_2D_data)
-            data['2Dimag'] = amp_2D_data*np.cos(phase_2D_data)
+            data['2Dreal'] = amp_2D_data*np.cos(phase_2D_data)
+            data['2Dimag'] = amp_2D_data*np.sin(phase_2D_data)
         
         #### save to HDF5 ####
         with h5py.File(output_path, 'w') as hdf:

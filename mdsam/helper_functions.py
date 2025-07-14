@@ -9,10 +9,21 @@ import numpy as np
 
 
 class HelperFunctions:
-
+    """
+    Class with generic functions that are used in to facilitate general, non-measurement specific data analysis.
+    """
+    
     cm = 1/2.54 
     
     def create_custom_colormap(colors, positions=None):
+        """ 
+        Creates a colormap with three colors. 
+        Parameters: 
+            - colors: list of three colors in rgb format (e.g: ['#2A9D8F','#e9c46a','#f4a261'])
+            
+        Returns:
+            - LinearSegmentedColormap
+        """ 
         if positions is None:
             positions = np.linspace(0, 1, len(colors))
         return LinearSegmentedColormap.from_list("", list(zip(positions, colors)))
@@ -47,6 +58,16 @@ class HelperFunctions:
     
     
     def find_idx(array,value):
+        """
+        Finds idx of a value in an array by determining closest neighbour. 
+        Parameters: 
+        - array: nd.array
+        - value: float 
+        
+        Returns: 
+        - idx: int
+        
+        """
         return np.argmin(abs(array-value))
     
     def get_sec(time_str):
