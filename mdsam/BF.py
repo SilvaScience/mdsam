@@ -32,30 +32,30 @@ class Bigfoot:
         p = Path(data_folder)
         if not p.is_absolute():
             cwd = os.getcwd()
-            data_folder = cwd + data_folder
-        
+            data_folder = os.path.join(cwd + data_folder)
+
         # append to data_folder to make access files insider folder 
-        data_folder = data_folder +  '\\'
+        data_folder = data_folder 
         
         #### load data ####
         # find data files in data folder
         files_raw = [file for file in os.listdir(data_folder) if file.find('.tsv')!= -1]
         if files_raw == []:
-            print('WARNING: No files found in data folder!')
-            print(data_folder)
+            raise FileNotFoundError('No files found in data folder! Current data folder is: {data_folder}')
         header_file = [file for file in os.listdir(data_folder) if file.find('Header.txt')!= -1][0]
         subfolder = [file for file in os.listdir(data_folder) if file.find('_Averages')!= -1][0]
-        subfolder_files = os.listdir(data_folder + subfolder)
+        subfolder_files = os.listdir(os.path.join(data_folder, subfolder))
+        print(subfolder_files)
         
         #prepare output filename
         num_run = header_file[-14:-11]
         sample_name = header_file[:-14]
         date = Path(data_folder).parent.name
         output_filenname = sample_name + '_' + date + '_' + num_run + '_Bigfoot.h5'
-        output_path = str(Path(data_folder).parent) + '\\' + output_filenname
+        output_path = os.path.join(str(Path(data_folder).parent),output_filenname)
 
         # process header data in separate function
-        header = Bigfoot_helper_functions.parse_mdcs_header_to_dict(data_folder + header_file)
+        header = Bigfoot_helper_functions.parse_mdcs_header_to_dict(os.path.join(data_folder,header_file))
         header['file_id'] = output_filenname[:-3]
 
         # order files in data dictionary 
@@ -82,7 +82,7 @@ class Bigfoot:
                 T_pop = T_pop_array[int(numbers_in_filename[-1])]
                 for f in filenames: 
                     if file.find(f)!= -1:
-                        data[T_pop]['raw'][f] = np.loadtxt(data_folder + file)
+                        data[T_pop]['raw'][f] = np.loadtxt(os.path.join(data_folder,file))
             
             # store averages
             for i,file in enumerate(subfolder_files):
@@ -91,7 +91,7 @@ class Bigfoot:
                 avg_num = int(numbers_in_filename[-1])
                 for f in subfolder_filenames: 
                     if file.find(f)!= -1:
-                        data[T_pop]['avg' + str(avg_num)][f] = np.loadtxt(data_folder + subfolder +'\\' + file)
+                        data[T_pop]['avg' + str(avg_num)][f] = np.loadtxt(os.path.join(data_folder,subfolder,file))
 
                         
             #### process data ####
@@ -132,7 +132,7 @@ class Bigfoot:
             for file in files_raw: # treat averaged data
                 for f in filenames: 
                     if file.find(f)!= -1:
-                        data['raw'][f] = np.loadtxt(data_folder + file)
+                        data['raw'][f] = np.loadtxt(os.path.join(data_folder,file))
             avg = list(range(len(subfolder_files))) # order individual scans in avg sub-directories
             for i,file in enumerate(subfolder_files):
                 avg[i] = file[file.find('avg'):file.find('.tsv')]
@@ -143,7 +143,7 @@ class Bigfoot:
                 for f in subfolder_filenames: 
                     if file.find(f)!= -1:
                         av = file[file.find('avg'):file.find('.tsv')]
-                        data[av][f] = np.loadtxt(data_folder + subfolder +'\\' + file)
+                        data[av][f] = np.loadtxt(os.path.join(data_folder,subfolder,file))
                         
             #### process data ####
             # extract valid range from header
