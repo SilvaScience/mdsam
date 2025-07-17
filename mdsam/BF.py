@@ -45,7 +45,6 @@ class Bigfoot:
         header_file = [file for file in os.listdir(data_folder) if file.find('Header.txt')!= -1][0]
         subfolder = [file for file in os.listdir(data_folder) if file.find('_Averages')!= -1][0]
         subfolder_files = os.listdir(os.path.join(data_folder, subfolder))
-        print(subfolder_files)
         
         #prepare output filename
         num_run = header_file[-14:-11]
