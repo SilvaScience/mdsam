@@ -5,9 +5,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mdsam"
-version = "0.0.1"
+version = "0.0.4"
 authors = [
   { name="Felix Thouin", email="felix.thouin@umontreal.ca" },
+  { name="David Otto Tiede", email="david.otto.tiede@umontreal.ca" },
+  { name="Simon Daneau", email="simon.daneau@umontreal.ca" },
 ]
 description = "Multidimensional spectroscopy analysis module"
 readme = "README.md"
