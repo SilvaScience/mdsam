@@ -13,10 +13,10 @@ import h5py
 import matplotlib as mpl
 from matplotlib import pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-from PT_data_workup_functions import mlList
-from PT_data_workup_functions import backgroundCorrect
-from PT_data_workup_functions import hammingWindow
-from PT_data_workup_functions import rowWiseLoop
+from mdsam.PT_data_workup_functions import mlList
+from mdsam.PT_data_workup_functions import backgroundCorrect
+from mdsam.PT_data_workup_functions import hammingWindow
+from mdsam.PT_data_workup_functions import rowWiseLoop
 
 class ImportData:
     '''
@@ -42,7 +42,8 @@ class ImportData:
         if totalScans == 0:
             print("No data files found matching prefix",
                   filePrefix, "in directory", self.fileDirectory, "\n")
-            sys.exit("Stopping script execution.")
+            return
+            # sys.exit("Stopping script execution.")
         
         output_h5_file = os.path.join(self.fileDirectory, f"{filePrefix}_saved.h5")
 
@@ -398,33 +399,137 @@ class PhaseTech2DIRData:
         self.dataSet = dataSet
         
     def Analysis(self):
-        
+            #with open("DataAnalysis.txt", "w") as f:
+             #   f.write (f"{nPixels} {fftLength} {numScans} {filePrefix} {FF} \n")
+            file_path = "Data_analysis.txt"
+            with open(file_path,"w") as f:
+                for a in range(11):
+                # Call the import_data method on the instance
+                  
+                        self.waitingTimeNum = a
+                        try:
+                            importer = ImportData(
+                                fileDirectory=self.fileDirectory,
+                                dataSet=self.dataSet,
+                                waitingTimeNum = self.waitingTimeNum
+                                )
+                            FTdata, dataTemp, nT1, numScans, nPixels,filePrefix, output_h5_file = importer.import_data(numScans=0, start=0)
+                            
+                            process = DataProcess(FTdata, nT1, numScans, fftLength=0, fftAxis=0, apodizeData= True, bkgdCorrect=False)
+                    
+                            axisList, FF, avgTF, data,fftLength = process.data_process(FTdata) 
+                            # nPixels = np.array(nPixels)
+                            # fftLength = np.array(fftLength)
+                            # numScans = np.array(numScans)
+                            # filePrefix = np.array(filePrefix)
+                            # FF = np.array(FF)
+                            f.write(f"{nPixels}\n")
+                            f.write(f"{fftLength}\n")
+                            f.write(f"{numScans}\n")
+                            f.write(f"{filePrefix}\n")
+                         #   f.write(f"{FF}\n")
+                        except Exception as e:
+                                               print(f'Maximum number of data files is: {e}')
 
-            for a in range(99):
-            # Call the import_data method on the instance
-                try:
-                    self.waitingTimeNum = a
-                    importer = ImportData(
-                        fileDirectory=self.fileDirectory,
-                        dataSet=self.dataSet,
-                        waitingTimeNum = self.waitingTimeNum
-                        )
-    
-                    FTdata, dataTemp, nT1, numScans, nPixels,filePrefix, output_h5_file = importer.import_data(numScans=0, start=0)
+
+            with open("array3D.txt","w") as f:
+                 for a in range(11):
+                     self.waitingTimeNum = a
+                     try:
+                           importer = ImportData(
+                               fileDirectory=self.fileDirectory,
+                               dataSet=self.dataSet,
+                               waitingTimeNum = self.waitingTimeNum
+                               )
+                           
+                           FTdata, dataTemp, nT1, numScans, nPixels,filePrefix, output_h5_file = importer.import_data(numScans=0, start=0)
+                           for i, slice_2d in enumerate(FTdata):
+                                       f.write(f"Slice {i}:\n")
+                                       np.savetxt(f, slice_2d, fmt="%.6f", delimiter="\t")
+                                       f.write("\n") 
+                                     
+                     except Exception as e:
+                                      print()                       
+            with open("FF.txt","w") as f:
+                  for a in range(11):
+                      self.waitingTimeNum = a
+                      try:
+                            importer = ImportData(
+                                fileDirectory=self.fileDirectory,
+                                dataSet=self.dataSet,
+                                waitingTimeNum = self.waitingTimeNum
+                                )
+                            FTdata, dataTemp, nT1,   numScans, nPixels,filePrefix, output_h5_file = importer.import_data(numScans=0, start=0)
+                            
+                            process = DataProcess(FTdata, nT1, numScans, fftLength=0, fftAxis=0, apodizeData= True, bkgdCorrect=False)
+                            axisList, FF, avgTF, data,fftLength = process.data_process(FTdata) 
+
+                           
+                            np.savetxt(f, FF, delimiter="\t")
+                                           
+                      except Exception as e:
+                                        print()
+
+    def Graphs(self):
+                   
+                    nPixels_ = []
+                    fftLength_ = []
+                    numScans_ = []
+                    filePrefix_ = []
+                    with open("Data_analysis.txt", "r", encoding="utf-8") as f:
+                        lines = f.readlines()
+                    k=0
+                    for line in lines:
+                        parts = line.strip().split()  # split by spaces
+                        if k == 0:
+                            nPixels_.append(int(parts[0]))
+                        if k == 1:
+                            fftLength_.append(float(parts[0]))
+                        if k == 2:
+                            numScans_.append(int(parts[0]))
+                        if k == 3:
+                            filePrefix_.append(parts[0])
+                        k= k +1
+                        if k ==4:
+                            k=0
+                    with open("FF.txt", "r", encoding="utf-8") as f:
+                                lines = f.readlines()
+                               
+                    k = 0  
+                    FF_ = []
+                    FF_d = []
+                    for line in lines:
+                                    if k  == 0:
+                                        FF_d = []
+                                    parts = line.strip().split()
+                                    parts_ = list(map(float, parts))
+                                    FF_d.append(parts_)
+                                    k= k + 1
+                                    if k==512:
+                                        FF_.append(np.array(FF_d))
+                                        k = 0
+ 
+                 
+        
+                    for a in range(len(FF_)):
+                        if a!=0:
+                            nPixels = nPixels_[a]
+                            fftLength = fftLength_[a]
+                            numScans = numScans_[a]
+                            filePrefix = filePrefix_[a]
+                            FF = FF_[a]
+                            
+                            Calib = AxisCalib (nPixels, fftLength, numScans, calibrate = True, plotDiagonal = True, diagSlope = 1, diagIntercept = 233, specDisplay = True, cropUncalibratedPlot = True)
+                                  
+                            probeIdx, pumpIdx, probeFreqs, pumpFreqs,diagonal = Calib.Calibration_data(diagMethod = int(0))
+                                  
+                            Plotting = Plot (probeIdx, pumpIdx, filePrefix, self.fileDirectory, diagonal, numScans, self.waitingTimeNum, start = 0, calibrate = True, specDisplay = True,  symmetricContours = True, 
+                                                 manualContourRange = False * [-0.4, 0.05], nContours = 20, manualAxisAspect = False, showProjections = True, plotDiagonal = True, flag_save_fig = True)
+                                    
+                            Plotting.Plot_data(probeFreqs, pumpFreqs, FF, diagMethod = int(0))     
+                                       
+
+
                     
-                    process = DataProcess(
-                        FTdata, nT1, numScans, fftLength=0, fftAxis=0, apodizeData= True, bkgdCorrect=False
-                    )
-                    
-                    axisList, FF, avgTF, data,fftLength = process.data_process(FTdata)
-                    
-                    Calib = AxisCalib (nPixels, fftLength, numScans, calibrate = True, plotDiagonal = True, diagSlope = 1, diagIntercept = 233, specDisplay = True, cropUncalibratedPlot = True)
-                    
-                    probeIdx, pumpIdx, probeFreqs, pumpFreqs,diagonal = Calib.Calibration_data(diagMethod = int(0))
-                    
-                    Plotting = Plot (probeIdx, pumpIdx, filePrefix, self.fileDirectory, diagonal, numScans, self.waitingTimeNum, start = 0, calibrate = True, specDisplay = True,  symmetricContours = True, 
-                                 manualContourRange = False * [-0.4, 0.05], nContours = 20, manualAxisAspect = False, showProjections = True, plotDiagonal = True, flag_save_fig = True)
-                    
-                    Plotting.Plot_data(probeFreqs, pumpFreqs, FF, diagMethod = int(0))
-                except Exception as e:
-                    print(f'Maximum number of data files is: {e}')
+                   
+                
