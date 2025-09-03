@@ -1,0 +1,83 @@
+Comment	IR pump (4850 nm) IR probe (pump light) W(CO)6 Mareny and David 03/12
+Date and Time	03/12/2025 16:12:34 -04:00:00
+QC Version	0.9.4.284
+Experiment Type	2D
+Domain	Time
+Step Size (fs)	20.000000
+Final Delay (fs)	4000.000000
+Time Chop?	FALSE
+Time Phase Cycle?	TRUE
+Rotating Frame (Scanned)	1585.000000
+Rotating Frame (Fixed)	0.000000
+Frames	2
+Frame 1, Scanned	1.000000
+Frame 1, Fixed	0.000000
+Frame 2, Scanned	1.000000
+Frame 2, Fixed	1.000000
+Waiting Time Delay Units	ps
+Waiting Time Step Mode	Linear
+Waiting Time Linear First	3.000000
+Waiting Time Linear Last	6.000000
+Waiting Time Linear Step	0.100000
+Waiting Time Reduce Neg Delays	FALSE
+Waiting Time Delays	3.000000,3.100000,3.200000,3.300000,3.400000,3.500000,3.600000,3.700000,3.800000,3.900000,4.000000,4.100000,4.200000,4.300000,4.400000,4.500000,4.600000,4.700000,4.800000,4.900000,5.000000,5.100000,5.200000,5.300000,5.400000,5.500000,5.600000,5.700000,5.800000,5.900000,6.000000
+Actinic Pump	FALSE
+Scan Mode	Rapid-Scan
+2D Average	50
+Additional Scan Type	Monochromator
+Additional Scan List	NaN0.1
+Custom Masks?	FALSE
+BackgroundCorrect?	FALSE
+Acq. Speed Mode?	FALSE
+AWG Mask Amplitude	65.000000
+AWG Mask Length	8192
+Dispersion Correction	TRUE
+Dispersion Wavelength	5050.000000
+Dispersion GVD	-110000.000000
+Dispersion TOD	0.000000
+Dispersion FOD	0.000000
+RF Power Correction?	FALSE
+RF Power Correction %	0.000000
+Bragg Correction?	FALSE
+Bragg Correction %	0.000000
+Linearity Correction?	TRUE
+Linearity Correction Peak Amplitude	100.000000
+Grating 1 Angle	-31.799805
+Grating 2 Angle	33.840500
+Grating 1 Zero Offset	-180.000000
+Grating 2 Zero Offset	-180.000000
+Shaper Calibration P1	5.070803E-8
+Shaper Calibration P2	-0.002263
+Shaper Calibration P3	64.972163
+AWG	PXDAC4800
+AWG Type	75.000000
+AWG Sampling Frequency	1200 MHz
+AWG External Clock	FALSE
+AOM Type	Germanium
+MONO1 Wavelength	5050.020020
+MONO1 Grating	1, "1: 180 g/mm"
+MONO1 Slit Width	0.000000
+MONO2	DISABLED
+MONO Calibration Type	CUSTOM
+Calib Point 0	px 1 = 4500.000000 nm
+Calib Point 1	px 64 = 5500.000000 nm
+Detector Pixels	2x32
+External Channels	2
+Detector	PhaseTech JackHammer IR
+PhaseTech JackHammer Trigger Acquistion?	FALSE
+PhaseTech JackHammer Pixel Software Delay	625
+PhaseTech JackHammer External Channel Delays	625, 15
+PhaseTech JackHammer Bias Voltage	TRUE
+Detection Mode	Probe
+Use Reference Beam	FALSE
+Detector Binning	1
+Detector Shot Rotation	0
+Subtract Dark Background	TRUE
+Dark Background File	C:\PhaseTech\data\Background Files\241028_TB_install_bkgd01
+IR Start Pulse Channel	1
+UV/VIS Chopper Channel	2
+Flip Signal Phase	TRUE
+Flip Detector Columns?	FALSE
+Internal Stage Flip Direction	TRUE
+Internal Stage Home Position	21.320663
+External Stage	DISABLED
