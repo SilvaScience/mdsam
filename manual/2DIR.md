@@ -12,9 +12,10 @@ from mdsam.Phasetech2DIR import PhaseTech2DIRData
 
 "Steps: 1. Enter the appropiate filepath in fileDirectory, 2. Enter the name of your file in dataSet"
 "Ex. if your complete file name is: 20250312#33_T01#001 write dataSet=[20250312,33]"
-
-main = PhaseTech2DIRData (fileDirectory=r"./Test_files", dataSet=["20250312", "33"])
-    
-main.Analysis()
-
-main.Graphs()
+data= PhaseTech2DIRData (fileDirectory=r"./Test_files", dataSet=["20250312", "33"])
+data.Graphs()
+# You can export data to H5 files using convenience method below
+data.export_to_h5(r"test_h5_file.h5")
+# This can then be reimported for later use
+new_data=PhaseTech2DIRData(r"test_h5_file.h5")
+new_data.Graphs()
