@@ -45,7 +45,7 @@ class TransientAbsorption:
                 "PumpPower": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
                 "PumpedSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),
                 "PumpedSignalDeviation": np.zeros((self.NbScan, self.NbDelay), dtype=np.float32),
-                
+                "PumpedSpectra": np.zeros((self.NbScan, self.NbDelay, self.NbWavelength), dtype=np.float32),
                 "TotalSignalCount": np.zeros((self.NbScan, self.NbDelay), dtype=np.int32),},
             "Statistics": {
                 "ChopperActualFrequency": np.zeros((), dtype=np.float32),
@@ -77,8 +77,8 @@ class TransientAbsorption:
         self.SampleName = SampleName
         self.extra_metadata = extra_metadata
         # Generate HDF5 file name using f-string for better readability
-        Hour = self.Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
-        self.HDF5FileName = f"{self.SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
+        # Hour = self.Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
+        # self.HDF5FileName = f"{self.SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
     
     def transform_to_HDF5(self):
 
@@ -97,7 +97,7 @@ class TransientAbsorption:
 
         # --- Initialize storage parameters ---
         self.NbDelay = len(AveragedOutputLines) - 2 - 1  # Number of delay points (skip 2 header lines)
-        self.NbScan = int(MeasurementStatisticsLines[7][16:-1]) - 1  # Number of scans (0-indexed)
+        self.NbScan = int(MeasurementStatisticsLines[7][16:-1])  # Number of scans (0-indexed)
         WavelengthStr = MeasurementStatisticsLines[19][12:-1].split('\t')
         self.NbWavelength = len(WavelengthStr) # Number of wavelength channels
 
@@ -215,6 +215,10 @@ class TransientAbsorption:
             for key, value in self.extra_metadata.items():
                 self.Data["Statistics"][key] = value
 
+        
+        # Generate HDF5 file name using f-string for better readability
+        Hour = self.Data["Statistics"]["MeasurementStarted"][11:-4].replace(":", "-")
+        self.HDF5FileName = f"{self.SampleName}_H-M-S_{Hour}_TransientAbsorption.hdf5"
 
         # Create HDF5
         #HDF5Helper.save_to_hdf5_with_prompt(Data, HDF5FileName)
